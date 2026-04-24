@@ -17,8 +17,7 @@
                 "id": ""
             },
             "placement": "top",
-            "endpoint": 0,
-            "selected": 0
+            "endpoint": 0
         },
         {
             "key": "field_hero_greeting",
@@ -62,7 +61,7 @@
         },
         {
             "key": "field_hero_tagline",
-            "label": "Tagline \/ Role",
+            "label": "Tagline / Role",
             "name": "hero_tagline",
             "aria-label": "",
             "type": "text",
@@ -122,7 +121,7 @@
         },
         {
             "key": "field_hero_image",
-            "label": "Hero Image \/ Photo",
+            "label": "Hero Image / Photo",
             "name": "hero_image",
             "aria-label": "",
             "type": "image",
@@ -196,7 +195,7 @@
                 "class": "",
                 "id": ""
             },
-            "placeholder": "https:\/\/example.com\/resume.pdf",
+            "placeholder": "https://example.com/resume.pdf",
             "default_value": ""
         },
         {
@@ -214,8 +213,7 @@
                 "id": ""
             },
             "placement": "top",
-            "endpoint": 0,
-            "selected": 0
+            "endpoint": 0
         },
         {
             "key": "field_social_github",
@@ -232,7 +230,7 @@
                 "id": ""
             },
             "default_value": "",
-            "placeholder": "https:\/\/github.com\/username"
+            "placeholder": "https://github.com/username"
         },
         {
             "key": "field_social_linkedin",
@@ -249,7 +247,7 @@
                 "id": ""
             },
             "default_value": "",
-            "placeholder": "https:\/\/linkedin.com\/in\/username"
+            "placeholder": "https://linkedin.com/in/username"
         },
         {
             "key": "field_social_email",
@@ -272,7 +270,7 @@
         },
         {
             "key": "field_social_twitter",
-            "label": "Twitter \/ X URL",
+            "label": "Twitter / X URL",
             "name": "social_twitter",
             "aria-label": "",
             "type": "url",
@@ -302,8 +300,7 @@
                 "id": ""
             },
             "placement": "top",
-            "endpoint": 0,
-            "selected": 0
+            "endpoint": 0
         },
         {
             "key": "field_works_section_subtitle",
@@ -340,8 +337,7 @@
                 "id": ""
             },
             "placement": "top",
-            "endpoint": 0,
-            "selected": 0
+            "endpoint": 0
         },
         {
             "key": "field_skills_section_subtitle",
@@ -379,9 +375,7 @@
             },
             "default_value": "All Skills, Languages, Frameworks & Libraries, Database Management, Tools & Cloud",
             "placeholder": "",
-            "maxlength": "",
-            "prepend": "",
-            "append": ""
+            "maxlength": ""
         },
         {
             "key": "field_core_technologies",
@@ -460,12 +454,11 @@
                 "id": ""
             },
             "placement": "top",
-            "endpoint": 0,
-            "selected": 0
+            "endpoint": 0
         },
         {
             "key": "field_footer_company_name",
-            "label": "Company \/ Portfolio Name",
+            "label": "Company / Portfolio Name",
             "name": "footer_company_name",
             "aria-label": "",
             "type": "text",
@@ -615,5 +608,5 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "modified": 1777019218
+    "modified": 1776000000
 }

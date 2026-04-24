@@ -123,5 +123,7 @@
     "description": "",
     "show_in_rest": false,
     "display_title": "",
-    "modified": 1772700157
+    "allow_ai_access": false,
+    "ai_description": "",
+    "modified": 1775805957
 }

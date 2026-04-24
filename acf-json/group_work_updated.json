@@ -209,7 +209,7 @@
                 "class": "",
                 "id": ""
             },
-            "placeholder": "https:\/\/example.com",
+            "placeholder": "https://example.com",
             "default_value": ""
         },
         {
@@ -271,5 +271,5 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "modified": 1777019232
+    "modified": 1776000000
 }
