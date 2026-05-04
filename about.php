@@ -1,3 +1,8 @@
+<?php
+/**
+* Template Name: About Page
+*/
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,6 +16,7 @@
         body { font-family: 'Plus Jakarta Sans', sans-serif; }
         .timeline-dot { left: 50%; transform: translateX(-50%); }
     </style>
+    <?php wp_head(); ?>
 </head>
 <body class="bg-[#F9FAFB] text-slate-900">
 
@@ -152,5 +158,6 @@
 
    
 
+    <?php wp_footer(); ?>
 </body>
 </html>
