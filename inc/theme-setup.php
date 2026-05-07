@@ -47,3 +47,12 @@ function devportfolio_setup() {
         'flex-width'  => true,
     ) );
 }
+
+add_filter( 'nav_menu_link_attributes', 'devportfolio_primary_menu_link_atts', 10, 4 );
+
+function devportfolio_primary_menu_link_atts( $atts, $item, $args, $depth ) {
+    if ( isset( $args->theme_location ) && 'primary' === $args->theme_location ) {
+        $atts['class'] = trim( ( $atts['class'] ?? '' ) . ' hover:text-black transition' );
+    }
+    return $atts;
+}
