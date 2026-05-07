@@ -8,8 +8,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-
-
     <style>
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
@@ -41,6 +39,7 @@
     </style>
 </head>
 <body class="text-slate-900">
+    
     <?php include get_template_directory() . '/header.php'; ?>
 
     <section class="relative min-h-screen flex items-center overflow-hidden -mt-6">
