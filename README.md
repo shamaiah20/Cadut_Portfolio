@@ -12,9 +12,11 @@ A minimal, dark-themed developer portfolio WordPress theme built with **ACF (Fre
 ## Local Development Setup with LocalWP
 
 ### 1. Install LocalWP
+
 Download and install [LocalWP](https://localwp.com/) for your operating system (Mac, Windows, or Linux).
 
 ### 2. Create a New Site
+
 1. Open LocalWP and click **"Create a new site"**
 2. Choose **"Create a new site"** (not from Blueprint)
 3. Enter a site name (e.g., `portfolio-theme`)
@@ -26,46 +28,56 @@ Download and install [LocalWP](https://localwp.com/) for your operating system (
 6. Click **"Add Site"** and wait for it to finish
 
 ### 3. Install the Theme
+
 **Option A — Clone from GitHub:**
+
 ```bash
 cd ~/Local\ Sites/portfolio-theme/app/public/wp-content/themes/
 git clone https://github.com/Dwight123-crypto/adventure-time-theme.git
 ```
 
 **Option B — Manual install:**
+
 1. Download the theme ZIP from GitHub
 2. In LocalWP, click **"Open site folder"** → navigate to `app/public/wp-content/themes/`
 3. Extract the `adventure-time-theme` folder there
 
 ### 4. Activate the Theme
+
 1. In LocalWP, click **"WP Admin"** to open the WordPress dashboard
 2. Go to **Appearance → Themes**
 3. Find **Adventure Time Theme** and click **Activate**
 
 ### 5. Install Required Plugins
+
 1. Go to **Plugins → Add New**
 2. Search for **"Advanced Custom Fields"** and install/activate it
 3. (Optional) Search for **"Contact Form 7"** and install/activate it
 
 ### 6. Import ACF Field Groups
+
 The theme includes pre-configured ACF JSON files in the `acf-json/` folder. These will auto-sync when you activate the theme:
+
 1. Go to **Custom Fields → Field Groups**
 2. You should see the 6 field groups already loaded (Homepage, About, Work, Skill, Certificate, Contact)
 3. If they don't appear, go to **Custom Fields → Tools → Import** and import the JSON files from the `acf-json/` folder
 
 ### 7. Create Pages
+
 Create these pages in WordPress:
 
-| Page          | Page Template        |
-|---------------|----------------------|
-| **Home**      | (set as Front Page)  |
-| **About**     | About Page           |
-| **Contact**   | Contact Page         |
+| Page        | Page Template       |
+| ----------- | ------------------- |
+| **Home**    | (set as Front Page) |
+| **About**   | About Page          |
+| **Contact** | Contact Page        |
 
 Then go to **Settings → Reading** and set "Home" as your static front page.
 
 ### 8. Set Up Navigation Menu
+
 Go to **Appearance → Menus** and create a Primary Menu with:
+
 - Home (link to front page)
 - About (link to About page)
 - Works (link to Works archive: `/works/`)
@@ -78,16 +90,19 @@ Assign it to the **Primary Navigation** location.
 ### 9. Add Content
 
 **Works** (Dashboard → Works → Add New)
+
 - Title, featured image, excerpt, and content
 - Fill in ACF fields: client, date, live URL, GitHub URL, technologies (one per line), up to 3 gallery images
 - Assign a Work Category
 
 **Skills** (Dashboard → Skills → Add New)
+
 - Title + optional featured image
 - Fill in ACF fields: icon, proficiency level, percentage, description, display order
 - Assign a Skill Category (e.g., Frontend, Backend, Tools)
 
 **Certificates** (Dashboard → Certificates → Add New)
+
 - Title + featured image
 - Fill in ACF fields: issuer, date earned, credential ID, verification URL, certificate image
 
@@ -157,19 +172,20 @@ The theme uses 6 ACF field groups. These are auto-loaded from the `acf-json/` fo
 
 **Location Rule:** Page Type → is equal to → Front Page
 
-| Field Label        | Field Name        | Field Type   | Notes                              |
-|--------------------|-------------------|--------------|------------------------------------|
-| Greeting Text      | `hero_greeting`   | Text         | Default: "Hello, I'm"             |
-| Your Name          | `hero_name`       | Text         |                                    |
-| Tagline / Role     | `hero_tagline`    | Text         |                                    |
-| Short Description  | `hero_description`| Textarea     | Rows: 3                           |
-| Hero Image / Photo | `hero_image`      | Image        | Return Format: Image Array         |
-| CTA Button Text    | `hero_cta_text`   | Text         | Default: "View My Work"           |
-| CTA Button Link    | `hero_cta_link`   | URL          |                                    |
-| GitHub URL         | `social_github`   | URL          |                                    |
-| LinkedIn URL       | `social_linkedin` | URL          |                                    |
-| Email Address      | `social_email`    | Email        |                                    |
-| Twitter / X URL    | `social_twitter`  | URL          |                                    |
+| Field Label        | Field Name         | Field Type | Notes                      |
+| ------------------ | ------------------ | ---------- | -------------------------- |
+| Greeting Text      | `hero_greeting`    | Text       | Default: "Hello, I'm"      |
+| Your Name          | `hero_name`        | Text       |                            |
+| Tagline / Role     | `hero_tagline`     | Text       |                            |
+| Short Description  | `hero_description` | Textarea   | Rows: 3                    |
+| Hero Image / Photo | `hero_image`       | Image      | Return Format: Image Array |
+| CTA Button Text    | `hero_cta_text`    | Text       | Default: "View My Work"    |
+| CTA Button Link    | `hero_cta_link`    | URL        |                            |
+| GitHub URL         | `social_github`    | URL        |                            |
+| LinkedIn URL       | `social_linkedin`  | URL        |                            |
+| Email Address      | `social_email`     | Email      |                            |
+| Twitter / X URL    | `social_twitter`   | URL        |                            |
+
 </details>
 
 <details>
@@ -177,14 +193,15 @@ The theme uses 6 ACF field groups. These are auto-loaded from the `acf-json/` fo
 
 **Location Rule:** Page Template → is equal to → About Page
 
-| Field Label          | Field Name             | Field Type | Notes                              |
-|----------------------|------------------------|------------|------------------------------------|
-| Profile Photo        | `about_photo`          | Image      | Return Format: Image Array         |
-| Bio / Long Desc      | `about_bio`            | WYSIWYG    | Media Upload: No                   |
-| Resume / CV (PDF)    | `about_resume_file`    | File       | Return Format: File URL, MIME: pdf |
-| Years of Experience  | `about_years_exp`      | Number     | Default: 0                         |
-| Projects Completed   | `about_projects_count` | Number     | Default: 0                         |
-| Happy Clients        | `about_clients_count`  | Number     | Default: 0                         |
+| Field Label         | Field Name             | Field Type | Notes                              |
+| ------------------- | ---------------------- | ---------- | ---------------------------------- |
+| Profile Photo       | `about_photo`          | Image      | Return Format: Image Array         |
+| Bio / Long Desc     | `about_bio`            | WYSIWYG    | Media Upload: No                   |
+| Resume / CV (PDF)   | `about_resume_file`    | File       | Return Format: File URL, MIME: pdf |
+| Years of Experience | `about_years_exp`      | Number     | Default: 0                         |
+| Projects Completed  | `about_projects_count` | Number     | Default: 0                         |
+| Happy Clients       | `about_clients_count`  | Number     | Default: 0                         |
+
 </details>
 
 <details>
@@ -192,16 +209,17 @@ The theme uses 6 ACF field groups. These are auto-loaded from the `acf-json/` fo
 
 **Location Rule:** Post Type → is equal to → Work
 
-| Field Label        | Field Name          | Field Type  | Notes                                                |
-|--------------------|---------------------|-------------|------------------------------------------------------|
-| Client Name        | `work_client`       | Text        |                                                      |
-| Project Date       | `work_date`         | Date Picker | Display Format: F Y, Return Format: F Y              |
-| Live URL           | `work_url`          | URL         |                                                      |
-| GitHub Repo URL    | `work_github_url`   | URL         |                                                      |
-| Technologies Used  | `work_technologies` | Textarea    | Rows: 4, Instructions: "One technology per line"     |
-| Gallery Image 1    | `work_gallery_1`    | Image       | Return Format: Image Array                           |
-| Gallery Image 2    | `work_gallery_2`    | Image       | Return Format: Image Array                           |
-| Gallery Image 3    | `work_gallery_3`    | Image       | Return Format: Image Array                           |
+| Field Label       | Field Name          | Field Type  | Notes                                            |
+| ----------------- | ------------------- | ----------- | ------------------------------------------------ |
+| Client Name       | `work_client`       | Text        |                                                  |
+| Project Date      | `work_date`         | Date Picker | Display Format: F Y, Return Format: F Y          |
+| Live URL          | `work_url`          | URL         |                                                  |
+| GitHub Repo URL   | `work_github_url`   | URL         |                                                  |
+| Technologies Used | `work_technologies` | Textarea    | Rows: 4, Instructions: "One technology per line" |
+| Gallery Image 1   | `work_gallery_1`    | Image       | Return Format: Image Array                       |
+| Gallery Image 2   | `work_gallery_2`    | Image       | Return Format: Image Array                       |
+| Gallery Image 3   | `work_gallery_3`    | Image       | Return Format: Image Array                       |
+
 </details>
 
 <details>
@@ -209,13 +227,14 @@ The theme uses 6 ACF field groups. These are auto-loaded from the `acf-json/` fo
 
 **Location Rule:** Post Type → is equal to → Skill
 
-| Field Label                    | Field Name          | Field Type | Notes                                                            |
-|--------------------------------|---------------------|------------|------------------------------------------------------------------|
-| Skill Icon (SVG or Image)      | `skill_icon`        | Image      | Return Format: Image Array                                       |
-| Proficiency Level              | `skill_proficiency` | Select     | Choices: beginner, intermediate, advanced, expert                |
-| Proficiency % (for bar)        | `skill_percentage`  | Number     | Min: 0, Max: 100, Default: 50                                   |
-| Short Description              | `skill_description` | Textarea   | Rows: 2                                                         |
-| Display Order                  | `skill_order`       | Number     | Default: 0, Instructions: "Lower = shows first"                 |
+| Field Label               | Field Name          | Field Type | Notes                                             |
+| ------------------------- | ------------------- | ---------- | ------------------------------------------------- |
+| Skill Icon (SVG or Image) | `skill_icon`        | Image      | Return Format: Image Array                        |
+| Proficiency Level         | `skill_proficiency` | Select     | Choices: beginner, intermediate, advanced, expert |
+| Proficiency % (for bar)   | `skill_percentage`  | Number     | Min: 0, Max: 100, Default: 50                     |
+| Short Description         | `skill_description` | Textarea   | Rows: 2                                           |
+| Display Order             | `skill_order`       | Number     | Default: 0, Instructions: "Lower = shows first"   |
+
 </details>
 
 <details>
@@ -223,13 +242,14 @@ The theme uses 6 ACF field groups. These are auto-loaded from the `acf-json/` fo
 
 **Location Rule:** Post Type → is equal to → Certificate
 
-| Field Label            | Field Name            | Field Type  | Notes                               |
-|------------------------|-----------------------|-------------|-------------------------------------|
-| Issuing Organization   | `cert_issuer`         | Text        |                                     |
-| Date Earned            | `cert_date`           | Date Picker | Display Format: F Y, Return: F Y   |
-| Credential ID          | `cert_credential_id`  | Text        |                                     |
-| Verification URL       | `cert_url`            | URL         |                                     |
-| Certificate Image      | `cert_image`          | Image       | Return Format: Image Array          |
+| Field Label          | Field Name           | Field Type  | Notes                            |
+| -------------------- | -------------------- | ----------- | -------------------------------- |
+| Issuing Organization | `cert_issuer`        | Text        |                                  |
+| Date Earned          | `cert_date`          | Date Picker | Display Format: F Y, Return: F Y |
+| Credential ID        | `cert_credential_id` | Text        |                                  |
+| Verification URL     | `cert_url`           | URL         |                                  |
+| Certificate Image    | `cert_image`         | Image       | Return Format: Image Array       |
+
 </details>
 
 <details>
@@ -237,14 +257,15 @@ The theme uses 6 ACF field groups. These are auto-loaded from the `acf-json/` fo
 
 **Location Rule:** Page Template → is equal to → Contact Page
 
-| Field Label                | Field Name                 | Field Type | Notes                                            |
-|----------------------------|----------------------------|------------|--------------------------------------------------|
-| Section Heading            | `contact_heading`          | Text       | Default: "Get In Touch"                          |
-| Description                | `contact_description`      | Textarea   | Rows: 3                                          |
-| Contact Email              | `contact_email`            | Email      |                                                  |
-| Phone Number               | `contact_phone`            | Text       |                                                  |
-| Location                   | `contact_location`         | Text       |                                                  |
-| Contact Form Shortcode     | `contact_form_shortcode`   | Text       | Instructions: "Paste CF7 or WPForms shortcode"   |
+| Field Label            | Field Name               | Field Type | Notes                                          |
+| ---------------------- | ------------------------ | ---------- | ---------------------------------------------- |
+| Section Heading        | `contact_heading`        | Text       | Default: "Get In Touch"                        |
+| Description            | `contact_description`    | Textarea   | Rows: 3                                        |
+| Contact Email          | `contact_email`          | Email      |                                                |
+| Phone Number           | `contact_phone`          | Text       |                                                |
+| Location               | `contact_location`       | Text       |                                                |
+| Contact Form Shortcode | `contact_form_shortcode` | Text       | Instructions: "Paste CF7 or WPForms shortcode" |
+
 </details>
 
 ## Free ACF Workarounds (No Repeater)
@@ -266,6 +287,7 @@ Since the free ACF plugin doesn't include the Repeater field:
 ## Changelog
 
 ### v1.0.0 — Initial Release
+
 - Dark-themed developer portfolio WordPress theme
 - 3 Custom Post Types: Works, Skills, Certificates
 - Custom taxonomies: Work Category, Skill Category
@@ -282,3 +304,7 @@ Since the free ACF plugin doesn't include the Repeater field:
 - Google Fonts integration (Inter + Fira Code)
 - CSS custom properties for easy theming
 - Screenshot included for theme preview
+
+# This is the Figma Link:
+
+- https://www.figma.com/design/wCvFRPyVnXUzc6QUq7hrsV/portfolio-jm?node-id=0-1&t=miQ0CawlpZ1UE2KB-1
