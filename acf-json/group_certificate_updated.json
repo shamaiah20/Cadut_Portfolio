@@ -1,0 +1,134 @@
+{
+    "key": "group_certificate_updated",
+    "title": "Certificate Details (Updated)",
+    "fields": [
+        {
+            "key": "field_cert_status",
+            "label": "Status",
+            "name": "cert_status",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Current status of the certification",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "ACTIVE": "ACTIVE",
+                "SPECIALTY": "SPECIALTY",
+                "LEGACY": "LEGACY"
+            },
+            "default_value": "ACTIVE",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
+        },
+        {
+            "key": "field_cert_icon",
+            "label": "Icon Class",
+            "name": "cert_icon",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Font Awesome icon class (e.g., fa-brands fa-aws)",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "placeholder": "fa-brands fa-aws",
+            "default_value": "",
+            "maxlength": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_cert_issuer",
+            "label": "Issuing Organization",
+            "name": "cert_issuer",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "placeholder": "e.g. Amazon Web Services",
+            "default_value": "",
+            "maxlength": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_cert_date",
+            "label": "Date Earned",
+            "name": "cert_date",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Display date (e.g. Jan 2024)",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "placeholder": "Jan 2024",
+            "default_value": "",
+            "maxlength": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_cert_url",
+            "label": "Verification URL",
+            "name": "cert_url",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "placeholder": "https:\/\/credential-link.com\/verify\/...",
+            "default_value": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "certificate"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [],
+    "active": true,
+    "description": "Updated fields for the certificate portfolio UI",
+    "show_in_rest": 0,
+    "display_title": "",
+    "allow_ai_access": 0,
+    "ai_description": "",
+    "modified": 1778576901
+}
