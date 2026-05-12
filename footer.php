@@ -13,18 +13,18 @@
             <div>
                 <h4 class="text-[#7C3AED] font-bold text-[10px] uppercase tracking-[0.2em] mb-8">Pages</h4>
                 <ul class="space-y-4 text-sm font-medium text-gray-400">
-                    <li><a href="#" class="hover:text-[#7C3AED] transition-colors">Home</a></li>
-                    <li><a href="#" class="hover:text-[#7C3AED] transition-colors">About</a></li>
-                    <li><a href="#" class="hover:text-[#7C3AED] transition-colors">Contact</a></li>
+                    <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="hover:text-[#7C3AED] transition-colors">Home</a></li>
+                    <li><a href="<?php echo esc_url( get_permalink( get_page_by_path('about') ) ); ?>" class="hover:text-[#7C3AED] transition-colors">About</a></li>
+                    <li><a href="<?php echo esc_url( get_permalink( get_page_by_path('contact') ) ); ?>" class="hover:text-[#7C3AED] transition-colors">Contact</a></li>
                 </ul>
             </div>
 
             <div>
                 <h4 class="text-[#7C3AED] font-bold text-[10px] uppercase tracking-[0.2em] mb-8">Connect</h4>
                 <ul class="space-y-4 text-sm font-medium text-gray-400">
-                    <li><a href="#" class="hover:text-[#7C3AED] transition-colors">GitHub</a></li>
-                    <li><a href="#" class="hover:text-[#7C3AED] transition-colors">LinkedIn</a></li>
-                    <li><a href="#" class="hover:text-[#7C3AED] transition-colors">Instagram</a></li>
+                    <li><a href="https://github.com/J4yemz" target="_blank" class="hover:text-[#7C3AED] transition-colors">GitHub</a></li>
+                    <li><a href="https://www.linkedin.com/in/john-mark-isaias-a4273736a/" target="_blank" class="hover:text-[#7C3AED] transition-colors">LinkedIn</a></li>
+                    <li><a href="https://www.instagram.com/jayem.jsx/" target="_blank" class="hover:text-[#7C3AED] transition-colors">Instagram</a></li>
                 </ul>
             </div>
 
@@ -43,8 +43,12 @@
             </p>
             <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">
                 BUILT WITH PRECISION.
-            </li>
+            </p>
         </div>
 
     </div>
 </footer>
+
+<?php wp_footer(); ?>
+</body>
+</html>

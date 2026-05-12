@@ -1,0 +1,936 @@
+{
+  "key": "group_front_page",
+  "title": "Front Page Settings",
+  "fields": [
+    {
+      "key": "field_fp_hero_tab",
+      "label": "Hero Section",
+      "name": "",
+      "aria-label": "",
+      "type": "tab",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": false,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "placement": "top",
+      "endpoint": 0,
+      "selected": 0
+    },
+    {
+      "key": "field_fp_hero_greeting",
+      "label": "Greeting Text",
+      "name": "hero_greeting",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "Small tagline above the name (e.g., 'Build. Scale. Innovate.')",
+      "required": false,
+      "conditional_logic": false,
+      "wrapper": {
+        "width": "50",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "Build. Scale. Innovate.",
+      "placeholder": "Build. Scale. Innovate.",
+      "maxlength": "",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_fp_hero_name",
+      "label": "Your Name",
+      "name": "hero_name",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "Displayed as the large h1 heading",
+      "required": false,
+      "conditional_logic": false,
+      "wrapper": {
+        "width": "50",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "John Mark Isaias",
+      "placeholder": "John Mark Isaias",
+      "maxlength": "",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_fp_hero_tagline",
+      "label": "Tagline \/ Role",
+      "name": "hero_tagline",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "Role or subtitle shown below the name in purple",
+      "required": false,
+      "conditional_logic": false,
+      "wrapper": {
+        "width": "50",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "Aspiring Full-Stack Developer",
+      "placeholder": "Aspiring Full-Stack Developer",
+      "maxlength": "",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_fp_hero_status_message",
+      "label": "Status Badge Text",
+      "name": "hero_status_message",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "Text inside the floating status badge on the hero image",
+      "required": false,
+      "conditional_logic": false,
+      "wrapper": {
+        "width": "50",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "Available for Craft",
+      "placeholder": "Available for Craft",
+      "maxlength": "",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_fp_hero_description",
+      "label": "Hero Description",
+      "name": "hero_description",
+      "aria-label": "",
+      "type": "textarea",
+      "instructions": "Paragraph text shown below the tagline in the hero section",
+      "required": false,
+      "conditional_logic": false,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "rows": 3,
+      "default_value": "Helping businesses build modern web and mobile applications at the intersection of full-stack development and AI-assisted innovation.",
+      "placeholder": "Helping businesses build modern web and mobile applications...",
+      "new_lines": "br",
+      "maxlength": ""
+    },
+    {
+      "key": "field_fp_hero_image",
+      "label": "Hero Image \/ Photo",
+      "name": "hero_image",
+      "aria-label": "",
+      "type": "image",
+      "instructions": "Profile photo displayed inside the blob-shaped frame",
+      "required": false,
+      "conditional_logic": false,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "return_format": "array",
+      "preview_size": "medium",
+      "library": "all",
+      "min_width": 0,
+      "min_height": 0,
+      "min_size": 0,
+      "max_width": 0,
+      "max_height": 0,
+      "max_size": 0,
+      "mime_types": ""
+    },
+    {
+      "key": "field_fp_hero_cta_text",
+      "label": "Primary CTA Button Text",
+      "name": "hero_cta_text",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "Label for the primary purple button",
+      "required": false,
+      "conditional_logic": false,
+      "wrapper": {
+        "width": "50",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "VIEW MY WORK",
+      "placeholder": "VIEW MY WORK",
+      "maxlength": "",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_fp_hero_cta_link",
+      "label": "Primary CTA Button Link",
+      "name": "hero_cta_link",
+      "aria-label": "",
+      "type": "url",
+      "instructions": "Where the primary button links to (e.g., #works)",
+      "required": false,
+      "conditional_logic": false,
+      "wrapper": {
+        "width": "50",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "#works",
+      "placeholder": "#works"
+    },
+    {
+      "key": "field_fp_hero_resume_label",
+      "label": "Resume Button Label",
+      "name": "hero_resume_label",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "Label for the secondary resume button",
+      "required": false,
+      "conditional_logic": false,
+      "wrapper": {
+        "width": "50",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "RESUME",
+      "placeholder": "RESUME",
+      "maxlength": "",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_fp_hero_resume_link",
+      "label": "Resume File \/ Link",
+      "name": "hero_resume_link",
+      "aria-label": "",
+      "type": "url",
+      "instructions": "Link to resume PDF or file upload URL",
+      "required": false,
+      "conditional_logic": false,
+      "wrapper": {
+        "width": "50",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "resume.pdf",
+      "placeholder": "resume.pdf"
+    },
+    {
+      "key": "field_fp_socials_tab",
+      "label": "Social Links",
+      "name": "",
+      "aria-label": "",
+      "type": "tab",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": false,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "placement": "top",
+      "endpoint": 0,
+      "selected": 0
+    },
+    {
+      "key": "field_fp_social_github",
+      "label": "GitHub URL",
+      "name": "social_github",
+      "aria-label": "",
+      "type": "url",
+      "instructions": "Links to the code icon in the hero social row",
+      "required": false,
+      "conditional_logic": false,
+      "wrapper": {
+        "width": "50",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "placeholder": "https:\/\/github.com\/username"
+    },
+    {
+      "key": "field_fp_social_email",
+      "label": "Email Address",
+      "name": "social_email",
+      "aria-label": "",
+      "type": "email",
+      "instructions": "Links to the @ icon in the hero social row",
+      "required": false,
+      "conditional_logic": false,
+      "wrapper": {
+        "width": "50",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "placeholder": "contact@example.com",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_fp_social_share_url",
+      "label": "Share \/ Portfolio URL",
+      "name": "social_share_url",
+      "aria-label": "",
+      "type": "url",
+      "instructions": "Links to the share-nodes icon in the hero social row",
+      "required": false,
+      "conditional_logic": false,
+      "wrapper": {
+        "width": "50",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "placeholder": "https:\/\/example.com"
+    },
+    {
+      "key": "field_fp_social_linkedin",
+      "label": "LinkedIn URL",
+      "name": "social_linkedin",
+      "aria-label": "",
+      "type": "url",
+      "instructions": "",
+      "required": false,
+      "conditional_logic": false,
+      "wrapper": {
+        "width": "50",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "placeholder": "https:\/\/linkedin.com\/in\/username"
+    },
+    {
+      "key": "field_fp_works_tab",
+      "label": "Featured Works",
+      "name": "",
+      "aria-label": "",
+      "type": "tab",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": false,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "placement": "top",
+      "endpoint": 0,
+      "selected": 0
+    },
+    {
+      "key": "field_fp_works_section_subtitle",
+      "label": "Works Section Description",
+      "name": "works_section_subtitle",
+      "aria-label": "",
+      "type": "textarea",
+      "instructions": "Paragraph shown below the 'Featured Works' heading",
+      "required": false,
+      "conditional_logic": false,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "rows": 3,
+      "default_value": "A selection of digital projects focused on scalable full-stack development, modern web and mobile applications, and efficient AI-assisted workflows.",
+      "placeholder": "A selection of digital projects...",
+      "new_lines": "br",
+      "maxlength": ""
+    },
+    {
+      "key": "field_fp_projects",
+      "label": "Projects",
+      "name": "projects",
+      "aria-label": "",
+      "type": "repeater",
+      "instructions": "Add each featured project card shown in the works grid",
+      "required": false,
+      "conditional_logic": false,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "collapsed": "field_fp_project_title",
+      "min": 0,
+      "max": 0,
+      "layout": "block",
+      "button_label": "Add Project",
+      "sub_fields": [
+        {
+          "key": "field_fp_project_title",
+          "label": "Project Title",
+          "name": "title",
+          "aria-label": "",
+          "type": "text",
+          "instructions": "",
+          "required": false,
+          "conditional_logic": false,
+          "wrapper": {
+            "width": "50",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "MIT Bitcoin Expo 2026",
+          "maxlength": "",
+          "prepend": "",
+          "append": ""
+        },
+        {
+          "key": "field_fp_project_image",
+          "label": "Project Thumbnail",
+          "name": "image",
+          "aria-label": "",
+          "type": "image",
+          "instructions": "Card thumbnail image (displayed at 256px height)",
+          "required": false,
+          "conditional_logic": false,
+          "wrapper": {
+            "width": "50",
+            "class": "",
+            "id": ""
+          },
+          "return_format": "url",
+          "preview_size": "medium",
+          "library": "all",
+          "min_width": 0,
+          "min_height": 0,
+          "min_size": 0,
+          "max_width": 0,
+          "max_height": 0,
+          "max_size": 0,
+          "mime_types": ""
+        },
+        {
+          "key": "field_fp_project_description",
+          "label": "Project Description",
+          "name": "description",
+          "aria-label": "",
+          "type": "textarea",
+          "instructions": "Short description shown on the project card",
+          "required": false,
+          "conditional_logic": false,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "rows": 3,
+          "default_value": "",
+          "placeholder": "Full-scale event infrastructure for the premier academic conference...",
+          "new_lines": "br",
+          "maxlength": ""
+        },
+        {
+          "key": "field_fp_project_tags",
+          "label": "Tech Tags",
+          "name": "tags",
+          "aria-label": "",
+          "type": "repeater",
+          "instructions": "Technology tags displayed as pills on the card",
+          "required": false,
+          "conditional_logic": false,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "collapsed": "",
+          "min": 0,
+          "max": 6,
+          "layout": "table",
+          "button_label": "Add Tag",
+          "sub_fields": [
+            {
+              "key": "field_fp_project_tag_name",
+              "label": "Tag",
+              "name": "tag",
+              "aria-label": "",
+              "type": "text",
+              "instructions": "",
+              "required": false,
+              "conditional_logic": false,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "default_value": "",
+              "placeholder": "NEXT.JS",
+              "maxlength": "",
+              "prepend": "",
+              "append": ""
+            }
+          ]
+        },
+        {
+          "key": "field_fp_project_highlights",
+          "label": "Project Highlights",
+          "name": "highlights",
+          "aria-label": "",
+          "type": "repeater",
+          "instructions": "Bullet-point achievements shown below the description",
+          "required": false,
+          "conditional_logic": false,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "collapsed": "",
+          "min": 0,
+          "max": 5,
+          "layout": "table",
+          "button_label": "Add Highlight",
+          "sub_fields": [
+            {
+              "key": "field_fp_project_highlight_text",
+              "label": "Highlight",
+              "name": "highlight",
+              "aria-label": "",
+              "type": "textarea",
+              "instructions": "",
+              "required": false,
+              "conditional_logic": false,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "rows": 2,
+              "default_value": "",
+              "placeholder": "Architected zero-knowledge proof ticketing system for 2k+ attendees.",
+              "new_lines": "br",
+              "maxlength": ""
+            }
+          ]
+        },
+        {
+          "key": "field_fp_project_detail_url",
+          "label": "View Details URL",
+          "name": "detail_url",
+          "aria-label": "",
+          "type": "url",
+          "instructions": "URL for the 'View Details' button on the card",
+          "required": false,
+          "conditional_logic": false,
+          "wrapper": {
+            "width": "50",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "#",
+          "placeholder": "https:\/\/example.com\/project"
+        },
+        {
+          "key": "field_fp_project_preview_url",
+          "label": "Preview \/ Gallery URL",
+          "name": "preview_url",
+          "aria-label": "",
+          "type": "url",
+          "instructions": "URL for the image\/preview icon button on the card",
+          "required": false,
+          "conditional_logic": false,
+          "wrapper": {
+            "width": "50",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "#",
+          "placeholder": "https:\/\/example.com\/project\/gallery"
+        }
+      ]
+    },
+    {
+      "key": "field_fp_skills_tab",
+      "label": "Technical Skills",
+      "name": "",
+      "aria-label": "",
+      "type": "tab",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": false,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "placement": "top",
+      "endpoint": 0,
+      "selected": 0
+    },
+    {
+      "key": "field_fp_skills_section_subtitle",
+      "label": "Skills Section Description",
+      "name": "skills_section_subtitle",
+      "aria-label": "",
+      "type": "textarea",
+      "instructions": "Paragraph shown below the 'Technical Skills' heading",
+      "required": false,
+      "conditional_logic": false,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "rows": 3,
+      "default_value": "A comprehensive overview of my technical expertise across full-stack development, modern frameworks, and web and mobile technologies.",
+      "placeholder": "A comprehensive overview of my technical expertise...",
+      "new_lines": "br",
+      "maxlength": ""
+    },
+    {
+      "key": "field_fp_skill_categories",
+      "label": "Skill Filter Categories",
+      "name": "skill_categories",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "Comma-separated list of filter tab labels. 'All Skills' must be first.",
+      "required": false,
+      "conditional_logic": false,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "All Skills, Languages, Frameworks & Libraries, Database Management, Tools & Cloud",
+      "placeholder": "All Skills, Languages, ...",
+      "maxlength": "",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_fp_skills",
+      "label": "Skills",
+      "name": "skills",
+      "aria-label": "",
+      "type": "repeater",
+      "instructions": "Individual skill cards shown in the filterable skills grid",
+      "required": false,
+      "conditional_logic": false,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "collapsed": "field_fp_skill_name",
+      "min": 0,
+      "max": 0,
+      "layout": "table",
+      "button_label": "Add Skill",
+      "sub_fields": [
+        {
+          "key": "field_fp_skill_name",
+          "label": "Skill Name",
+          "name": "name",
+          "aria-label": "",
+          "type": "text",
+          "instructions": "",
+          "required": false,
+          "conditional_logic": false,
+          "wrapper": {
+            "width": "34",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "React",
+          "maxlength": "",
+          "prepend": "",
+          "append": ""
+        },
+        {
+          "key": "field_fp_skill_icon",
+          "label": "Font Awesome Icon Class",
+          "name": "icon",
+          "aria-label": "",
+          "type": "text",
+          "instructions": "Full FA class string (e.g., 'fa-brands fa-react')",
+          "required": false,
+          "conditional_logic": false,
+          "wrapper": {
+            "width": "33",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "fa-solid fa-code",
+          "placeholder": "fa-brands fa-react",
+          "maxlength": "",
+          "prepend": "",
+          "append": ""
+        },
+        {
+          "key": "field_fp_skill_category",
+          "label": "Category",
+          "name": "cat",
+          "aria-label": "",
+          "type": "select",
+          "instructions": "Used by the JS filter to show\/hide cards",
+          "required": false,
+          "conditional_logic": false,
+          "wrapper": {
+            "width": "33",
+            "class": "",
+            "id": ""
+          },
+          "choices": {
+            "Languages": "Languages",
+            "Frameworks & Libraries": "Frameworks & Libraries",
+            "Database Management": "Database Management",
+            "Tools & Cloud": "Tools & Cloud"
+          },
+          "default_value": "Languages",
+          "allow_null": 0,
+          "multiple": 0,
+          "ui": 0,
+          "return_format": "value",
+          "ajax": 0,
+          "placeholder": "",
+          "create_options": 0,
+          "save_options": 0
+        }
+      ]
+    },
+    {
+      "key": "field_fp_core_technologies",
+      "label": "Core Technologies (Carousel)",
+      "name": "core_technologies",
+      "aria-label": "",
+      "type": "repeater",
+      "instructions": "Items in the scrolling logo carousel at the bottom of the skills section",
+      "required": false,
+      "conditional_logic": false,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "collapsed": "",
+      "min": 0,
+      "max": 0,
+      "layout": "table",
+      "button_label": "Add Technology",
+      "sub_fields": [
+        {
+          "key": "field_fp_core_tech_name",
+          "label": "Technology Name",
+          "name": "name",
+          "aria-label": "",
+          "type": "text",
+          "instructions": "",
+          "required": false,
+          "conditional_logic": false,
+          "wrapper": {
+            "width": "50",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "logoipsum",
+          "maxlength": "",
+          "prepend": "",
+          "append": ""
+        },
+        {
+          "key": "field_fp_core_tech_icon",
+          "label": "Icon (Font Awesome class)",
+          "name": "icon",
+          "aria-label": "",
+          "type": "text",
+          "instructions": "e.g., 'fa-solid fa-bolt'",
+          "required": false,
+          "conditional_logic": false,
+          "wrapper": {
+            "width": "50",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "fa-solid fa-code",
+          "placeholder": "fa-solid fa-bolt",
+          "maxlength": "",
+          "prepend": "",
+          "append": ""
+        }
+      ]
+    },
+    {
+      "key": "field_fp_footer_tab",
+      "label": "Footer Section",
+      "name": "",
+      "aria-label": "",
+      "type": "tab",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": false,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "placement": "top",
+      "endpoint": 0,
+      "selected": 0
+    },
+    {
+      "key": "field_fp_footer_company_name",
+      "label": "Portfolio \/ Brand Name",
+      "name": "footer_company_name",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "Name displayed in the footer header",
+      "required": false,
+      "conditional_logic": false,
+      "wrapper": {
+        "width": "50",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "J4YEMZ",
+      "placeholder": "J4YEMZ",
+      "maxlength": "",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_fp_footer_description",
+      "label": "Footer Description",
+      "name": "footer_description",
+      "aria-label": "",
+      "type": "textarea",
+      "instructions": "Short blurb in the footer first column",
+      "required": false,
+      "conditional_logic": false,
+      "wrapper": {
+        "width": "50",
+        "class": "",
+        "id": ""
+      },
+      "rows": 3,
+      "default_value": "Building modern digital experiences with precision and purpose. Based in the Philippines, working globally.",
+      "placeholder": "Building modern digital experiences...",
+      "new_lines": "br",
+      "maxlength": ""
+    },
+    {
+      "key": "field_fp_footer_email",
+      "label": "Contact Email",
+      "name": "footer_email",
+      "aria-label": "",
+      "type": "email",
+      "instructions": "Email shown in the footer contact column",
+      "required": false,
+      "conditional_logic": false,
+      "wrapper": {
+        "width": "50",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "placeholder": "contact@example.com",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_fp_footer_phone",
+      "label": "Contact Phone",
+      "name": "footer_phone",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "Phone number shown in the footer contact column",
+      "required": false,
+      "conditional_logic": false,
+      "wrapper": {
+        "width": "50",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "placeholder": "+63 966 881 0579",
+      "maxlength": "",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_fp_footer_social_github",
+      "label": "Footer GitHub URL",
+      "name": "footer_social_github",
+      "aria-label": "",
+      "type": "url",
+      "instructions": "",
+      "required": false,
+      "conditional_logic": false,
+      "wrapper": {
+        "width": "50",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "placeholder": "https:\/\/github.com\/username"
+    },
+    {
+      "key": "field_fp_footer_social_linkedin",
+      "label": "Footer LinkedIn URL",
+      "name": "footer_social_linkedin",
+      "aria-label": "",
+      "type": "url",
+      "instructions": "",
+      "required": false,
+      "conditional_logic": false,
+      "wrapper": {
+        "width": "50",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "placeholder": "https:\/\/linkedin.com\/in\/username"
+    },
+    {
+      "key": "field_fp_footer_social_instagram",
+      "label": "Footer Instagram URL",
+      "name": "footer_social_instagram",
+      "aria-label": "",
+      "type": "url",
+      "instructions": "",
+      "required": false,
+      "conditional_logic": false,
+      "wrapper": {
+        "width": "50",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "placeholder": "https:\/\/instagram.com\/username"
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "page_type",
+        "operator": "==",
+        "value": "front_page"
+      }
+    ]
+  ],
+  "menu_order": 0,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": [],
+  "active": true,
+  "description": "Complete ACF field group for front-page.php — hero, social links, projects repeater, skills repeater, and footer",
+  "show_in_rest": false,
+  "display_title": "",
+  "allow_ai_access": false,
+  "ai_description": "",
+  "modified": 1778551971
+}
