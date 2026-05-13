@@ -61,6 +61,7 @@ $carousel_loop = array_merge($carousel_items, $carousel_items);
 
     .status-badge-float {
         animation: float 3s ease-in-out infinite;
+        z-index: 100;
     }
 
     @keyframes float {
@@ -75,6 +76,57 @@ $carousel_loop = array_merge($carousel_items, $carousel_items);
     @keyframes scroll {
         0% { transform: translateX(0); }
         100% { transform: translateX(-50%); }
+    }
+
+    /* Work Card Premium Styles */
+    .work-card-premium {
+        background: #FFFFFF;
+        border-radius: 32px;
+        overflow: hidden;
+        border: 1px solid #F3F4F6;
+        transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+    .work-card-premium:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 30px 60px -15px rgba(109, 40, 217, 0.12);
+        border-color: #DDD6FE;
+    }
+    .work-image-container {
+        position: relative;
+        height: 280px;
+        overflow: hidden;
+    }
+    .work-image-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.8s ease;
+    }
+    .work-card-premium:hover .work-image-container img {
+        transform: scale(1.05);
+    }
+    .work-tag-badge {
+        background: rgba(255, 255, 255, 0.9);
+        backdrop-filter: blur(8px);
+        padding: 4px 12px;
+        border-radius: 99px;
+        font-size: 10px;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: #6D28D9;
+        border: 1px solid rgba(109, 40, 217, 0.1);
+    }
+    .fade-up {
+        animation: fadeUp 0.8s ease-out forwards;
+        opacity: 0;
+    }
+    @keyframes fadeUp {
+        from { opacity: 0; transform: translateY(24px); }
+        to { opacity: 1; transform: translateY(0); }
     }
 </style>
 
@@ -160,68 +212,81 @@ $carousel_loop = array_merge($carousel_items, $carousel_items);
     </div>
 
     <div class="grid md:grid-cols-3 gap-8">
-        <?php if (have_rows('projects')): ?>
-            <?php while (have_rows('projects')): the_row(); ?>
-                <?php
-                $title       = get_sub_field('title');
-                $image       = get_sub_field('image');
-                $description = get_sub_field('description');
-                $detail_url  = get_sub_field('detail_url') ?: '#';
-                $preview_url = get_sub_field('preview_url') ?: '#';
-                ?>
-                <div class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300 border border-gray-100 flex flex-col h-full">
+        <?php
+        $works_args = array(
+            'post_type'      => 'work',
+            'posts_per_page' => 3, // Show top 3 on front page
+            'orderby'        => 'menu_order',
+            'order'          => 'ASC',
+        );
 
-                    <div class="h-64 overflow-hidden relative group">
-                        <img src="<?php echo esc_url($image); ?>" alt="<?php echo esc_attr($title); ?>" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
-                        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition duration-300"></div>
+        $works_query = new WP_Query( $works_args );
+
+        if ( $works_query->have_posts() ) :
+            $i = 0;
+            while ( $works_query->have_posts() ) :
+                $works_query->the_post();
+                $i++;
+                
+                // ACF Fields from JSON
+                $featured_img = get_field('work_featured_image');
+                $tags = devportfolio_parse_lines(get_field('work_tags'));
+                $short_desc = get_field('work_short_description');
+                $highlights = get_field('work_highlights');
+                
+                // Fallback to post thumbnail if ACF image is missing
+                $image_url = $featured_img ? $featured_img['url'] : get_the_post_thumbnail_url(get_the_ID(), 'large');
+                ?>
+                
+                <article class="work-card-premium fade-up" style="animation-delay: <?php echo $i * 0.1; ?>s;">
+                    <div class="work-image-container">
+                        <img src="<?php echo esc_url($image_url); ?>" alt="<?php the_title_attribute(); ?>">
+                        <div class="absolute top-6 left-6 flex flex-wrap gap-2">
+                            <?php if($tags): foreach(array_slice($tags, 0, 3) as $tag): ?>
+                                <span class="work-tag-badge"><?php echo esc_html($tag); ?></span>
+                            <?php endforeach; endif; ?>
+                        </div>
                     </div>
 
-                    <div class="p-8 flex flex-col flex-grow">
-                        <div class="flex flex-wrap gap-2 mb-6">
-                            <?php if (have_rows('tags')): ?>
-                                <?php while (have_rows('tags')): the_row(); ?>
-                                    <span class="bg-gray-100 text-gray-400 text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider italic">
-                                        <?php echo esc_html(get_sub_field('tag')); ?>
-                                    </span>
-                                <?php endwhile; ?>
-                            <?php endif; ?>
-                        </div>
-
-                        <h3 class="text-2xl font-extrabold text-[#111827] mb-4">
-                            <?php echo esc_html($title); ?>
+                    <div class="p-10 flex flex-col flex-grow">
+                        <h3 class="text-2xl font-black text-slate-900 mb-4 tracking-tight group">
+                            <a href="<?php the_permalink(); ?>" class="hover:text-[#7C3AED] transition-colors">
+                                <?php the_title(); ?>
+                            </a>
                         </h3>
-
-                        <p class="text-gray-500 text-sm leading-relaxed mb-6">
-                            <?php echo esc_html($description); ?>
+                        
+                        <p class="text-gray-500 text-sm leading-relaxed mb-8 flex-grow">
+                            <?php echo $short_desc ? esc_html($short_desc) : devportfolio_excerpt(100); ?>
                         </p>
 
-                        <ul class="space-y-3 mb-8 flex-grow">
-                            <?php if (have_rows('highlights')): ?>
-                                <?php while (have_rows('highlights')): the_row(); ?>
-                                    <li class="flex items-start gap-3">
-                                        <span class="mt-1 text-[#7C3AED]">
-                                            <i class="fa-regular fa-circle-check text-sm"></i>
-                                        </span>
-                                        <span class="text-xs text-gray-500 font-medium leading-tight">
-                                            <?php echo esc_html(get_sub_field('highlight')); ?>
-                                        </span>
-                                    </li>
-                                <?php endwhile; ?>
-                            <?php endif; ?>
+                        <?php if($highlights): ?>
+                        <ul class="space-y-3 mb-8">
+                            <?php foreach(array_slice($highlights, 0, 2) as $row): ?>
+                                <li class="flex items-start gap-3">
+                                    <span class="mt-1 text-[#7C3AED]">
+                                        <i class="fa-regular fa-circle-check text-sm"></i>
+                                    </span>
+                                    <span class="text-[11px] text-gray-500 font-bold leading-tight uppercase tracking-tight">
+                                        <?php echo esc_html($row['highlight']); ?>
+                                    </span>
+                                </li>
+                            <?php endforeach; ?>
                         </ul>
+                        <?php endif; ?>
 
-                        <div class="flex items-center gap-3">
-                            <a href="<?php echo esc_url($detail_url); ?>" class="flex-grow bg-[#7C3AED] text-white text-center py-3 rounded-xl text-sm font-bold hover:bg-[#6D28D9] transition shadow-md shadow-purple-100">
-                                View Details
-                            </a>
-                            <a href="<?php echo esc_url($preview_url); ?>" class="bg-purple-50 text-[#7C3AED] p-3 rounded-xl hover:bg-purple-100 transition">
-                                <i class="fa-regular fa-image"></i>
+                        <div class="pt-6 border-t border-gray-50 flex items-center justify-between">
+                            <a href="<?php the_permalink(); ?>" class="text-xs font-black text-[#7C3AED] uppercase tracking-widest hover:translate-x-2 transition-transform inline-flex items-center gap-2">
+                                View Details <i class="fa-solid fa-arrow-right"></i>
                             </a>
                         </div>
                     </div>
+                </article>
 
-                </div>
-            <?php endwhile; ?>
+            <?php 
+            endwhile;
+            wp_reset_postdata();
+        else : ?>
+            <p class="text-gray-400 font-medium col-span-3 text-center">No featured projects found yet.</p>
         <?php endif; ?>
     </div>
 
@@ -248,17 +313,28 @@ $carousel_loop = array_merge($carousel_items, $carousel_items);
     </div>
 
     <div class="bg-gray-50 rounded-[40px] p-8 md:p-16 border border-gray-100">
-        <div id="skills-grid" class="grid grid-cols-2 md:grid-cols-6 gap-6">
-            <?php if (have_rows('skills')): ?>
-                <?php while (have_rows('skills')): the_row(); ?>
-                    <div class="skill-card bg-white p-8 rounded-3xl shadow-sm border border-gray-50 flex flex-col items-center justify-center gap-4 transition-all hover:shadow-md group"
-                         data-category="<?php echo esc_attr(get_sub_field('cat')); ?>">
-                        <div class="text-3xl text-[#7C3AED] group-hover:scale-110 transition-transform">
-                            <i class="<?php echo esc_attr(get_sub_field('icon')); ?>"></i>
-                        </div>
-                        <span class="text-sm font-bold text-gray-700"><?php echo esc_html(get_sub_field('name')); ?></span>
+        <div id="skills-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            <?php
+            $skills_query = new WP_Query(array(
+                'post_type'      => 'skill',
+                'posts_per_page' => -1,
+                'orderby'        => 'menu_order',
+                'order'          => 'ASC',
+            ));
+
+            if ($skills_query->have_posts()) :
+                while ($skills_query->have_posts()) :
+                    $skills_query->the_post();
+                    $category = get_field('skill_category');
+                    ?>
+                    <div class="skill-card" data-category="<?php echo esc_attr($category); ?>">
+                        <?php get_template_part('template-parts/card', 'skill'); ?>
                     </div>
-                <?php endwhile; ?>
+                <?php 
+                endwhile;
+                wp_reset_postdata();
+            else : ?>
+                <p class="text-gray-400 font-medium col-span-full">No skills found yet.</p>
             <?php endif; ?>
         </div>
     </div>

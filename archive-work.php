@@ -156,21 +156,21 @@ get_header(); ?>
 </section>
 
 <!-- Call to Action -->
-<section class="pb-32 px-8 md:px-24">
-    <div class="container mx-auto max-w-7xl">
-        <div class="bg-slate-900 rounded-[48px] p-16 md:p-24 text-center relative overflow-hidden">
+<section class="pb-24 px-8 md:px-24">
+    <div class="container mx-auto max-w-5xl">
+        <div class="bg-slate-900 rounded-[40px] p-12 md:p-16 text-center relative overflow-hidden">
             <!-- Background Decoration -->
-            <div class="absolute top-0 right-0 w-64 h-64 bg-purple-600 rounded-full blur-[120px] opacity-20 -mr-32 -mt-32"></div>
-            <div class="absolute bottom-0 left-0 w-64 h-64 bg-blue-600 rounded-full blur-[120px] opacity-10 -ml-32 -mb-32"></div>
+            <div class="absolute top-0 right-0 w-48 h-48 bg-purple-600 rounded-full blur-[100px] opacity-20 -mr-24 -mt-24"></div>
+            <div class="absolute bottom-0 left-0 w-48 h-48 bg-blue-600 rounded-full blur-[100px] opacity-10 -ml-24 -mb-24"></div>
 
             <div class="relative z-10">
-                <h2 class="text-4xl md:text-6xl font-black text-white mb-8 tracking-tighter">
+                <h2 class="text-3xl md:text-5xl font-black text-white mb-6 tracking-tighter">
                     Ready to build something<br><span class="text-[#7C3AED]">intentional?</span>
                 </h2>
-                <p class="text-gray-400 text-lg mb-12 max-w-2xl mx-auto font-medium">
+                <p class="text-gray-400 text-base md:text-lg mb-10 max-w-xl mx-auto font-medium">
                     Let's collaborate on your next project. Whether you need a full-stack solution, AI integration, or innovative design, I'm here to bring your vision to life.
                 </p>
-                <a href="<?php echo esc_url(home_url('/contact')); ?>" class="inline-block bg-[#7C3AED] text-white px-12 py-5 rounded-2xl font-black text-sm uppercase tracking-widest hover:bg-white hover:text-slate-900 transition-all duration-300 shadow-xl shadow-purple-900/20">
+                <a href="<?php echo esc_url(home_url('/contact')); ?>" class="inline-block bg-[#7C3AED] text-white px-10 py-4 rounded-xl font-black text-xs uppercase tracking-widest hover:bg-white hover:text-slate-900 transition-all duration-300 shadow-xl shadow-purple-900/20">
                     Let's Connect
                 </a>
             </div>

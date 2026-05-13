@@ -45,6 +45,17 @@ get_header(); ?>
         color: #6D28D9;
         flex-shrink: 0;
     }
+
+    .label-text {
+    margin-bottom: -20px !important; /* adjust this number to your liking */
+    margin-top: 10px !important;
+    display: block;
+    }
+
+    .wpcf7-form-control-wrap {
+        display: block;
+        margin-top: 0 !important;
+    }
 </style>
 
 <div class="max-w-7xl mx-auto px-6 md:px-24 py-16">
@@ -59,111 +70,86 @@ get_header(); ?>
 
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
         
-        <!-- Contact Form -->
-        <div class="lg:col-span-2 contact-card p-10">
-            <h2 class="text-2xl font-bold text-slate-900 mb-2">Send me a message</h2>
-            <p class="text-gray-400 text-sm mb-10">Fill out the form below and I'll get back to you as soon as possible.</p>
+    <!-- Contact Form -->
+    <div class="lg:col-span-2 contact-card p-10">
+        <h2 class="text-2xl font-bold text-slate-900 mb-2">Send me a message</h2>
+        <p class="text-gray-400 text-sm mb-10">Fill out the form below and I'll get back to you as soon as possible.</p>
 
-            <form action="#" class="space-y-6">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                        <label class="label-text">Name</label>
-                        <input type="text" class="input-field" placeholder="John Mark Isaias">
+        <?php echo do_shortcode('[contact-form-7 id="123" title="Contact Form"]'); ?>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="space-y-8">
+        
+        <!-- Socials -->
+        <div class="contact-card p-10">
+            <h2 class="text-2xl font-bold text-slate-900 mb-2">Connect with me</h2>
+            <p class="text-gray-400 text-sm mb-10">You can also reach out to me directly through these channels.</p>
+
+            <div class="space-y-6">
+                <a href="https://github.com/J4yemz" target="_blank" class="flex items-center gap-4 group">
+                    <div class="icon-box group-hover:bg-[#6D28D9] group-hover:text-white transition-colors">
+                        <i class="fa-brands fa-github text-xl"></i>
                     </div>
                     <div>
-                        <label class="label-text">Phone number</label>
-                        <input type="text" class="input-field" placeholder="+63 9123456789">
+                        <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest leading-none mb-1">GitHub</p>
+                        <p class="text-sm font-bold text-slate-700">github.com/J4yemz</p>
+                    </div>
+                </a>
+
+                <a href="https://www.linkedin.com/in/john-mark-isaias-a4273736a/" target="_blank" class="flex items-center gap-4 group">
+                    <div class="icon-box group-hover:bg-[#6D28D9] group-hover:text-white transition-colors">
+                        <i class="fa-brands fa-linkedin text-xl"></i>
+                    </div>
+                    <div>
+                        <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest leading-none mb-1">LinkedIn</p>
+                        <p class="text-sm font-bold text-slate-700">linkedin.com/in/j4yemz</p>
+                    </div>
+                </a>
+
+                <a href="mailto:johnmarkeisaias@gmail.com" class="flex items-center gap-4 group">
+                    <div class="icon-box group-hover:bg-[#6D28D9] group-hover:text-white transition-colors">
+                        <i class="fa-regular fa-envelope text-xl"></i>
+                    </div>
+                    <div>
+                        <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest leading-none mb-1">Email</p>
+                        <p class="text-sm font-bold text-slate-700">johnmarkeisaias@gmail.com</p>
+                    </div>
+                </a>
+
+                <div class="flex items-center gap-4 group">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-phone text-xl"></i>
+                    </div>
+                    <div>
+                        <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest leading-none mb-1">Phone</p>
+                        <p class="text-sm font-bold text-slate-700">+63 966 881 0579</p>
                     </div>
                 </div>
-
-                <div>
-                    <label class="label-text">Email</label>
-                    <input type="email" class="input-field" placeholder="johnmarkeisaias@gmail.com">
-                </div>
-
-                <div>
-                    <label class="label-text">Subject</label>
-                    <input type="text" class="input-field" placeholder="Project Inquiry">
-                </div>
-
-                <div>
-                    <label class="label-text">Message</label>
-                    <textarea class="input-field h-40 resize-none" placeholder="I'd like to discuss a project opportunity..."></textarea>
-                </div>
-
-                <button type="submit" class="bg-[#6D28D9] text-white px-8 py-4 rounded-xl font-bold hover:bg-[#5B21B6] transition-all flex items-center gap-2 group">
-                    Send Message 
-                    <i class="fa-solid fa-paper-plane group-hover:translate-x-1 transition-transform"></i>
-                </button>
-            </form>
+            </div>
         </div>
 
-        <!-- Sidebar -->
-        <div class="space-y-8">
-            
-            <!-- Socials -->
-            <div class="contact-card p-10">
-                <h2 class="text-2xl font-bold text-slate-900 mb-2">Connect with me</h2>
-                <p class="text-gray-400 text-sm mb-10">You can also reach out to me directly through these channels.</p>
-
-                <div class="space-y-6">
-                    <a href="https://github.com/J4yemz" target="_blank" class="flex items-center gap-4 group">
-                        <div class="icon-box group-hover:bg-[#6D28D9] group-hover:text-white transition-colors">
-                            <i class="fa-brands fa-github text-xl"></i>
-                        </div>
-                        <div>
-                            <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest leading-none mb-1">GitHub</p>
-                            <p class="text-sm font-bold text-slate-700">github.com/J4yemz</p>
-                        </div>
-                    </a>
-
-                    <a href="https://www.linkedin.com/in/john-mark-isaias-a4273736a/" target="_blank" class="flex items-center gap-4 group">
-                        <div class="icon-box group-hover:bg-[#6D28D9] group-hover:text-white transition-colors">
-                            <i class="fa-brands fa-linkedin text-xl"></i>
-                        </div>
-                        <div>
-                            <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest leading-none mb-1">LinkedIn</p>
-                            <p class="text-sm font-bold text-slate-700">linkedin.com/in/j4yemz</p>
-                        </div>
-                    </a>
-
-                    <a href="mailto:johnmarkeisaias@gmail.com" class="flex items-center gap-4 group">
-                        <div class="icon-box group-hover:bg-[#6D28D9] group-hover:text-white transition-colors">
-                            <i class="fa-regular fa-envelope text-xl"></i>
-                        </div>
-                        <div>
-                            <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest leading-none mb-1">Email</p>
-                            <p class="text-sm font-bold text-slate-700">johnmarkeisaias@gmail.com</p>
-                        </div>
-                    </a>
-
-                    <div class="flex items-center gap-4 group">
-                        <div class="icon-box">
-                            <i class="fa-solid fa-phone text-xl"></i>
-                        </div>
-                        <div>
-                            <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest leading-none mb-1">Phone</p>
-                            <p class="text-sm font-bold text-slate-700">+63 966 881 0579</p>
-                        </div>
-                    </div>
+        <!-- Location Map -->
+        <div class="contact-card overflow-hidden h-64 relative group">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31546522.84650532!2d103.88242440306236!3d15.539868778918237!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33b0a6885f8d1c93%3A0x9597793d537877e5!2sPhilippines!5e0!3m2!1sen!2sph!4v1715562725661!5m2!1sen!2sph" 
+                class="w-full h-full border-0 grayscale group-hover:grayscale-0 transition-all duration-700" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+            <div class="absolute inset-0 bg-white/40 pointer-events-none flex flex-col justify-end p-8 group-hover:bg-white/20 transition-all">
+                <div class="flex items-center gap-2 mb-2">
+                    <div class="w-2 h-2 bg-[#6D28D9] rounded-full animate-pulse"></div>
+                    <span class="text-[10px] font-black text-[#6D28D9] uppercase tracking-widest">Current Location</span>
                 </div>
+                <p class="text-xl font-extrabold text-slate-900 leading-tight">Philippines</p>
             </div>
-
-            <!-- Location Map -->
-            <div class="contact-card overflow-hidden h-64 relative group">
-                <img src="https://images.unsplash.com/photo-1501949997128-2fbb9f6429f1?auto=format&fit=crop&w=800&q=80" alt="Boston Map" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                <div class="absolute inset-0 bg-white/60 flex flex-col justify-end p-8 backdrop-blur-[2px]">
-                    <div class="flex items-center gap-2 mb-2">
-                        <div class="w-2 h-2 bg-[#6D28D9] rounded-full animate-pulse"></div>
-                        <span class="text-[10px] font-black text-[#6D28D9] uppercase tracking-widest">Current Location</span>
-                    </div>
-                    <p class="text-xl font-extrabold text-slate-900 leading-tight">Boston, Massachusetts, USA</p>
-                </div>
-            </div>
-
         </div>
 
     </div>
+
+</div>
 
 </div>
 

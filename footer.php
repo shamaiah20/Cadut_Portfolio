@@ -49,6 +49,24 @@
     </div>
 </footer>
 
+<button id="scrollToTop" class="fixed bottom-8 right-8 w-12 h-12 bg-[#7C3AED] text-white rounded-2xl shadow-xl shadow-purple-900/20 flex items-center justify-center opacity-0 invisible translate-y-4 transition-all duration-300 z-50 hover:bg-[#111827] hover:-translate-y-1">
+    <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+<script>
+    const scrollBtn = document.getElementById('scrollToTop');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 500) {
+            scrollBtn.classList.remove('opacity-0', 'invisible', 'translate-y-4');
+        } else {
+            scrollBtn.classList.add('opacity-0', 'invisible', 'translate-y-4');
+        }
+    });
+    scrollBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+</script>
+
 <?php wp_footer(); ?>
 </body>
 </html>
