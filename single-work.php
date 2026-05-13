@@ -25,14 +25,14 @@ $hero_image = $featured_img ? $featured_img['url'] : get_the_post_thumbnail_url(
         background: #FFFFFF;
         border-radius: 32px;
         border: 1px solid #F3F4F6;
-        padding: 40px;
+        padding: 48px;
         position: sticky;
-        top: 120px;
+        top: 140px;
     }
     .tech-pill {
         background: #F9FAFB;
         border: 1px solid #F3F4F6;
-        padding: 6px 14px;
+        padding: 8px 16px;
         border-radius: 12px;
         font-size: 11px;
         font-weight: 700;
@@ -59,17 +59,17 @@ $hero_image = $featured_img ? $featured_img['url'] : get_the_post_thumbnail_url(
 </style>
 
 <!-- Project Hero -->
-<section class="pt-24 pb-16 px-8 md:px-24">
+<section class="pt-8 pb-8 px-8 md:px-24">
     <div class="container mx-auto max-w-7xl">
-        <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div class="grid lg:grid-cols-2 gap-20 items-center">
             <div class="fade-up">
-                <a href="<?php echo home_url('/works'); ?>" class="inline-flex items-center gap-2 text-xs font-black text-[#7C3AED] uppercase tracking-widest mb-8 hover:-translate-x-2 transition-transform">
+                <a href="<?php echo home_url('/works'); ?>" class="inline-flex items-center gap-2 text-xs font-black text-[#7C3AED] uppercase tracking-widest mb-10 hover:-translate-x-2 transition-transform">
                     <i class="fa-solid fa-arrow-left"></i> Back to Gallery
                 </a>
-                <h1 class="text-5xl md:text-7xl font-black text-slate-900 tracking-tighter mb-8 leading-[0.95]">
+                <h1 class="text-5xl md:text-7xl font-black text-slate-900 tracking-tighter mb-10 leading-[0.95]">
                     <?php the_title(); ?>
                 </h1>
-                <div class="flex flex-wrap gap-3 mb-10">
+                <div class="flex flex-wrap gap-3 mb-12">
                     <?php if($tags): foreach($tags as $tag): ?>
                         <span class="bg-purple-50 text-[#7C3AED] text-[10px] font-black px-4 py-2 rounded-full uppercase tracking-widest"><?php echo esc_html($tag); ?></span>
                     <?php endforeach; endif; ?>
@@ -78,10 +78,10 @@ $hero_image = $featured_img ? $featured_img['url'] : get_the_post_thumbnail_url(
                     <?php echo $short_desc ? esc_html($short_desc) : get_the_excerpt(); ?>
                 </p>
             </div>
-            
+
             <div class="fade-up" style="animation-delay: 0.2s;">
-                <div class="rounded-[48px] overflow-hidden border border-gray-100 shadow-2xl shadow-purple-900/10 h-[500px]">
-                    <img src="<?php echo esc_url($hero_image); ?>" alt="<?php the_title(); ?>" class="w-full h-full object-cover">
+                <div class="overflow-hidden border border-gray-100 shadow-2xl shadow-purple-900/10">
+                    <img src="<?php echo esc_url($hero_image); ?>" alt="<?php the_title(); ?>" class="w-full h-auto">
                 </div>
             </div>
         </div>
