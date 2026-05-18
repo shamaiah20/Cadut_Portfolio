@@ -19,9 +19,9 @@ $hero_resume_label = get_field('hero_resume_label')   ?: 'RESUME';
 $hero_resume_link  = get_field('hero_resume_link')    ?: 'resume.pdf';
 
 // Social fields
-$social_github    = get_field('social_github');
-$social_email     = get_field('social_email');
-$social_share_url = get_field('social_share_url');
+$social_github    = get_field('social_github') ?: 'https://github.com/J4yemz';
+$social_email     = get_field('social_email') ?: 'johnmarkeisaias@gmail.com';
+$social_share_url = get_field('social_share_url') ?: 'https://www.linkedin.com/in/john-mark-isaias-a4273736a/';
 
 // Section content
 $works_subtitle  = get_field('works_section_subtitle')  ?: 'A selection of digital projects focused on scalable full-stack development, modern web and mobile applications, and efficient AI-assisted workflows.';
@@ -44,11 +44,21 @@ if (have_rows('core_technologies')) {
 }
 if (empty($carousel_items)) {
     $carousel_items = [
-        ['name' => 'logoipsum', 'icon' => 'fa-solid fa-bolt'],
-        ['name' => 'logoipsum', 'icon' => 'fa-solid fa-cube'],
-        ['name' => 'logoipsum', 'icon' => 'fa-solid fa-circle-nodes'],
-        ['name' => 'logoipsum', 'icon' => 'fa-solid fa-wind'],
-        ['name' => 'logoipsum', 'icon' => 'fa-solid fa-shield-halved'],
+        ['name' => 'Javascript', 'icon' => 'fa-brands fa-js'],
+        ['name' => 'React', 'icon' => 'fa-brands fa-react'],
+        ['name' => 'Expo', 'icon' => 'fa-brands fa-react'],
+        ['name' => 'Nodejs', 'icon' => 'fa-brands fa-node'],
+        ['name' => 'Laravel', 'icon' => 'fa-brands fa-laravel'],
+        ['name' => 'Npm', 'icon' => 'fa-brands fa-npm'],
+        ['name' => 'Php', 'icon' => 'fa-brands fa-php'],
+        ['name' => 'Github', 'icon' => 'fa-brands fa-github'],
+        ['name' => 'Git', 'icon' => 'fa-brands fa-git-alt'],
+        ['name' => 'Mysql', 'icon' => 'fa-solid fa-database'],
+        ['name' => 'MongoDB', 'icon' => 'fa-solid fa-database'],
+        ['name' => 'Wordpress', 'icon' => 'fa-brands fa-wordpress'],
+        ['name' => 'Shadcn', 'icon' => 'fa-brands fa-uikit'],
+        ['name' => 'Figma', 'icon' => 'fa-brands fa-figma'],
+        ['name' => 'Java', 'icon' => 'fa-brands fa-java'],
     ];
 }
 $carousel_loop = array_merge($carousel_items, $carousel_items);
@@ -70,7 +80,7 @@ $carousel_loop = array_merge($carousel_items, $carousel_items);
     }
 
     .animate-scroll {
-        animation: scroll 20s linear infinite;
+        animation: scroll 20s linear infinite alternate;
     }
 
     @keyframes scroll {
@@ -131,7 +141,7 @@ $carousel_loop = array_merge($carousel_items, $carousel_items);
 </style>
 
 <!-- Hero Section -->
-<section class="relative min-h-screen flex items-center overflow-hidden -mt-6">
+<section class="relative min-h-screen flex items-center overflow-hidden -mt-20">
     <div class="container mx-auto px-8 md:px-24 grid md:grid-cols-2 gap-16 items-center">
 
         <div class="z-10">
@@ -152,19 +162,19 @@ $carousel_loop = array_merge($carousel_items, $carousel_items);
                 <a href="<?php echo esc_url($hero_cta_link); ?>" class="bg-[#7C3AED] text-white px-8 py-4 rounded-xl font-bold shadow-lg shadow-purple-200 hover:bg-[#6D28D9] transition transform hover:-translate-y-1">
                     <?php echo esc_html($hero_cta_text); ?>
                 </a>
-                <a href="<?php echo esc_url($hero_resume_link); ?>" class="bg-white border border-gray-100 text-gray-900 px-8 py-4 rounded-xl font-bold shadow-sm hover:bg-gray-50 transition transform hover:-translate-y-1">
+                <a href="<?php echo esc_url($hero_resume_link); ?>" target="_blank" class="bg-white border border-gray-100 text-gray-900 px-8 py-4 rounded-xl font-bold shadow-sm hover:bg-gray-50 transition transform hover:-translate-y-1">
                     <?php echo esc_html($hero_resume_label); ?>
                 </a>
             </div>
 
             <div class="flex gap-6 text-gray-400">
-                <a href="<?php echo $social_github ? esc_url($social_github) : '#'; ?>" class="hover:text-[#7C3AED] transition-colors">
+                <a href="<?php echo $social_github ? esc_url($social_github) : '#'; ?>" target="_blank" class="hover:text-[#7C3AED] transition-colors">
                     <i class="fa-solid fa-code text-xl"></i>
                 </a>
                 <a href="<?php echo $social_email ? esc_url('mailto:' . $social_email) : '#'; ?>" class="hover:text-[#7C3AED] transition-colors">
                     <i class="fa-solid fa-at text-xl"></i>
                 </a>
-                <a href="<?php echo $social_share_url ? esc_url($social_share_url) : '#'; ?>" class="hover:text-[#7C3AED] transition-colors">
+                <a href="<?php echo $social_share_url ? esc_url($social_share_url) : '#'; ?>" target="_blank" class="hover:text-[#7C3AED] transition-colors">
                     <i class="fa-solid fa-share-nodes text-xl"></i>
                 </a>
             </div>
