@@ -59,7 +59,7 @@ $hero_image = $featured_img ? $featured_img['url'] : get_the_post_thumbnail_url(
 </style>
 
 <!-- Project Hero -->
-<section class="pt-8 pb-8 px-8 md:px-24">
+<section class="py-16 px-8 md:px-24 bg-white">
     <div class="container mx-auto max-w-7xl">
         <div class="grid lg:grid-cols-2 gap-20 items-center">
             <div class="fade-up">
@@ -89,7 +89,7 @@ $hero_image = $featured_img ? $featured_img['url'] : get_the_post_thumbnail_url(
 </section>
 
 <!-- Content & Details -->
-<section class="py-24 bg-[#F9FAFB] px-8 md:px-24">
+<section class="py-16 px-8 md:px-24 bg-[#f2f2f0]">
     <div class="container mx-auto max-w-7xl">
         <div class="grid lg:grid-cols-3 gap-16">
             
@@ -186,7 +186,7 @@ $hero_image = $featured_img ? $featured_img['url'] : get_the_post_thumbnail_url(
 </section>
 
 <!-- Next Project Navigation -->
-<section class="py-32 bg-white px-8 md:px-24 border-t border-gray-100">
+<section class="py-16 bg-white px-8 md:px-24 border-t border-gray-100">
     <div class="container mx-auto max-w-7xl">
         <?php
         $next_post = get_next_post();

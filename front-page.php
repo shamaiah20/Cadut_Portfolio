@@ -205,7 +205,7 @@ $carousel_loop = array_merge($carousel_items, $carousel_items);
 </section>
 
 <!-- Featured Works Section -->
-<section id="works" class="py-24 bg-[#F8F8F8]">
+<section id="works" class="py-24 bg-white">
 <div class="container mx-auto px-8 md:px-24">
 
     <div class="mb-16">
@@ -304,7 +304,7 @@ $carousel_loop = array_merge($carousel_items, $carousel_items);
 </section>
 
 <!-- Technical Skills Section -->
-<section class="py-24 bg-white">
+<section class="py-24 bg-[#f2f2f0]">
 <div class="container mx-auto px-8 md:px-24 text-center">
 
     <h2 class="text-5xl font-extrabold text-[#111827] mb-6">Technical Skills</h2>

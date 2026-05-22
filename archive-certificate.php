@@ -26,7 +26,7 @@ get_header(); ?>
 </style>
 
 <!-- Certificates Hero Section -->
-<section class="pt-24 pb-16 px-8 md:px-24 fade-up">
+<section class="py-16 px-8 md:px-24 bg-white fade-up">
     <div class="container mx-auto max-w-7xl">
         <div class="mb-12">
             <span class="text-[#7C3AED] font-black text-[10px] uppercase tracking-[0.3em] mb-4 block">VALIDATION & MASTERY</span>
@@ -41,7 +41,7 @@ get_header(); ?>
 </section>
 
 <!-- Technical Certifications Section -->
-<section class="pb-32 px-8 md:px-24 bg-[#F9FAFB] py-24">
+<section class="py-16 px-8 md:px-24 bg-[#f2f2f0]">
     <div class="container mx-auto max-w-7xl">
         <div class="flex items-center justify-between mb-12 fade-up" style="animation-delay: 0.2s;">
             <h2 class="text-2xl font-black text-slate-900 tracking-tight">Technical Certifications</h2>
@@ -76,7 +76,7 @@ get_header(); ?>
 </section>
 
 <!-- Call to Action Section -->
-<section class="py-32 px-8 md:px-24 bg-[#F8F8F8]">
+<section class="py-16 px-8 md:px-24 bg-white">
     <div class="container mx-auto max-w-7xl text-center">
         <div class="inline-block bg-white px-6 py-2 rounded-full shadow-sm border border-gray-100 mb-8">
             <span class="text-gray-500 text-[10px] font-bold uppercase tracking-widest">Ready to collaborate?</span>

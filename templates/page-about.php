@@ -94,7 +94,7 @@ get_header(); ?>
 </style>
 
 <!-- ═══════════════════════ HERO SECTION ═══════════════════════ -->
-<section class="max-w-7xl mx-auto px-6 md:px-12 pt-14 pb-20">
+<section class="max-w-7xl mx-auto px-8 md:px-24 py-16 bg-white">
     <div class="bg-white rounded-5xl p-10 md:p-20 border border-gray-100 relative overflow-hidden shadow-sm fade-up">
         <!-- Decorative blobs -->
         <div class="absolute -top-32 -right-32 w-[500px] h-[500px] bg-violet-50 rounded-full blur-[120px] pointer-events-none"></div>
@@ -113,7 +113,7 @@ get_header(); ?>
 </section>
 
 <!-- ═══════════════════════ BIO + SKILLS GRID ═══════════════════════ -->
-<section class="max-w-7xl mx-auto px-6 md:px-12 pb-24">
+<section class="max-w-7xl mx-auto px-8 md:px-24 py-16 bg-[#f2f2f0]">
     <div class="grid md:grid-cols-2 gap-10">
 
         <!-- Bio -->
@@ -211,7 +211,7 @@ get_header(); ?>
 
 
 <!-- ═══════════════════════ EDUCATION TIMELINE ═══════════════════════ -->
-<section class="max-w-7xl mx-auto px-6 md:px-12 pb-32">
+<section class="max-w-7xl mx-auto px-8 md:px-24 py-16 bg-white">
 
     <div class="text-center mb-20 fade-up delay-3">
         <span class="section-label">Educational Background</span>

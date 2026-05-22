@@ -18,7 +18,7 @@ get_header(); ?>
 </style>
 
 <!-- Skills Hero Section -->
-<section class="pt-24 pb-16 px-8 md:px-24 fade-up">
+<section class="py-16 px-8 md:px-24 bg-white fade-up">
     <div class="container mx-auto max-w-7xl">
         <div class="mb-12">
             <span class="text-[#7C3AED] font-black text-[10px] uppercase tracking-[0.3em] mb-4 block">Technical Stack</span>
@@ -33,7 +33,7 @@ get_header(); ?>
 </section>
 
 <!-- Skills Sections -->
-<section class="pb-32 px-8 md:px-24">
+<section class="py-16 px-8 md:px-24 bg-[#f2f2f0]">
     <div class="container mx-auto max-w-7xl">
         <?php
         $categories = array(

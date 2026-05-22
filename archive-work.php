@@ -57,7 +57,7 @@ get_header(); ?>
 </style>
 
 <!-- Works Hero Section -->
-<section class="pt-24 pb-16 px-8 md:px-24 fade-up">
+<section class="py-16 px-8 md:px-24 bg-white fade-up">
     <div class="container mx-auto max-w-7xl">
         <div class="mb-12">
             <span class="text-[#7C3AED] font-black text-[10px] uppercase tracking-[0.3em] mb-4 block">Portfolio Gallery</span>
@@ -72,7 +72,7 @@ get_header(); ?>
 </section>
 
 <!-- Works Grid Section -->
-<section class="pb-32 px-8 md:px-24">
+<section class="py-16 px-8 md:px-24 bg-[#f2f2f0]">
     <div class="container mx-auto max-w-7xl">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             <?php
@@ -156,7 +156,7 @@ get_header(); ?>
 </section>
 
 <!-- Call to Action -->
-<section class="pb-24 px-8 md:px-24">
+<section class="py-16 px-8 md:px-24 bg-white">
     <div class="container mx-auto max-w-5xl">
         <div class="bg-slate-900 rounded-[40px] p-12 md:p-16 text-center relative overflow-hidden">
             <!-- Background Decoration -->

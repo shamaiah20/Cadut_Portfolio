@@ -67,6 +67,36 @@
     });
 </script>
 
+<script>
+    (function () {
+        const html   = document.documentElement;
+        const btn    = document.getElementById('darkToggle');
+        const icon   = btn ? btn.querySelector('i') : null;
+
+        function applyTheme(dark) {
+            html.classList.toggle('dark', dark);
+            if (icon) {
+                icon.className = dark ? 'fa-regular fa-sun text-lg' : 'fa-regular fa-moon text-lg';
+            }
+        }
+
+        // Load saved preference, fall back to system preference
+        const saved = localStorage.getItem('darkMode');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        applyTheme(saved !== null ? saved === 'true' : prefersDark);
+
+        if (btn) {
+            btn.addEventListener('click', function () {
+                const isDark = html.classList.toggle('dark');
+                localStorage.setItem('darkMode', isDark);
+                if (icon) {
+                    icon.className = isDark ? 'fa-regular fa-sun text-lg' : 'fa-regular fa-moon text-lg';
+                }
+            });
+        }
+    })();
+</script>
+
 <?php wp_footer(); ?>
 </body>
 </html>
