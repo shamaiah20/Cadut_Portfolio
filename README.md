@@ -1,4 +1,4 @@
-# John Mark Portfolio Theme
+# Shamaiah Portfolio Theme
 
 A minimal, dark-themed developer portfolio WordPress theme built with **ACF (Free)** and **Custom Post Types**. Features a responsive design with scroll animations, project filtering, and a clean card-based layout.
 

@@ -17,8 +17,8 @@ get_header(); ?>
     }
     .work-card-premium:hover {
         transform: translateY(-8px);
-        box-shadow: 0 30px 60px -15px rgba(109, 40, 217, 0.12);
-        border-color: #DDD6FE;
+        box-shadow: 0 30px 60px -15px rgba(158, 42, 92, 0.12);
+        border-color: #FCE7F3;
     }
     .work-image-container {
         position: relative;
@@ -43,8 +43,8 @@ get_header(); ?>
         font-weight: 800;
         text-transform: uppercase;
         letter-spacing: 0.05em;
-        color: #6D28D9;
-        border: 1px solid rgba(109, 40, 217, 0.1);
+        color: #9E2A5C;
+        border: 1px solid rgba(158, 42, 92, 0.1);
     }
     .fade-up {
         animation: fadeUp 0.8s ease-out forwards;
@@ -60,9 +60,9 @@ get_header(); ?>
 <section class="py-16 px-8 md:px-24 bg-white fade-up">
     <div class="container mx-auto max-w-7xl">
         <div class="mb-12">
-            <span class="text-[#7C3AED] font-black text-[10px] uppercase tracking-[0.3em] mb-4 block">Portfolio Gallery</span>
+            <span class="text-[#9E2A5C] font-black text-[10px] uppercase tracking-[0.3em] mb-4 block">Portfolio Gallery</span>
             <h1 class="text-6xl md:text-8xl font-extrabold text-[#111827] mb-6 tracking-tighter">
-                Featured <span class="text-[#7C3AED]">Works</span>
+                Featured <span class="text-[#9E2A5C]">Works</span>
             </h1>
             <p class="text-gray-500 text-lg md:text-xl max-w-2xl leading-relaxed font-medium">
                 A selection of digital projects focused on scalable full-stack development, modern web and mobile applications, and efficient AI-assisted workflows.
@@ -113,7 +113,7 @@ get_header(); ?>
 
                         <div class="p-10 flex flex-col flex-grow">
                             <h2 class="text-2xl font-black text-slate-900 mb-4 tracking-tight group">
-                                <a href="<?php the_permalink(); ?>" class="hover:text-[#7C3AED] transition-colors">
+                                <a href="<?php the_permalink(); ?>" class="hover:text-[#9E2A5C] transition-colors">
                                     <?php the_title(); ?>
                                 </a>
                             </h2>
@@ -126,7 +126,7 @@ get_header(); ?>
                             <ul class="space-y-3 mb-8">
                                 <?php foreach(array_slice($highlights, 0, 2) as $row): ?>
                                     <li class="flex items-start gap-3">
-                                        <span class="mt-1 text-[#7C3AED]">
+                                        <span class="mt-1 text-[#9E2A5C]">
                                             <i class="fa-regular fa-circle-check text-sm"></i>
                                         </span>
                                         <span class="text-[11px] text-gray-500 font-bold leading-tight uppercase tracking-tight">
@@ -138,7 +138,7 @@ get_header(); ?>
                             <?php endif; ?>
 
                             <div class="pt-6 border-t border-gray-50 flex items-center justify-between">
-                                <a href="<?php the_permalink(); ?>" class="text-xs font-black text-[#7C3AED] uppercase tracking-widest hover:translate-x-2 transition-transform inline-flex items-center gap-2">
+                                <a href="<?php the_permalink(); ?>" class="text-xs font-black text-[#9E2A5C] uppercase tracking-widest hover:translate-x-2 transition-transform inline-flex items-center gap-2">
                                     View Details <i class="fa-solid fa-arrow-right"></i>
                                 </a>
                             </div>
@@ -157,20 +157,20 @@ get_header(); ?>
 
 <!-- Call to Action -->
 <section class="py-16 px-8 md:px-24 bg-white">
-    <div class="container mx-auto max-w-5xl">
+    <div class="container mx-auto px-8 md:px-24 max-w-5xl">
         <div class="bg-slate-900 rounded-[40px] p-12 md:p-16 text-center relative overflow-hidden">
             <!-- Background Decoration -->
-            <div class="absolute top-0 right-0 w-48 h-48 bg-purple-600 rounded-full blur-[100px] opacity-20 -mr-24 -mt-24"></div>
+            <div class="absolute top-0 right-0 w-48 h-48 bg-[#801B45] rounded-full blur-[100px] opacity-20 -mr-24 -mt-24"></div>
             <div class="absolute bottom-0 left-0 w-48 h-48 bg-blue-600 rounded-full blur-[100px] opacity-10 -ml-24 -mb-24"></div>
 
             <div class="relative z-10">
                 <h2 class="text-3xl md:text-5xl font-black text-white mb-6 tracking-tighter">
-                    Ready to build something<br><span class="text-[#7C3AED]">intentional?</span>
+                    Ready to build something<br><span class="text-[#9E2A5C]">intentional?</span>
                 </h2>
                 <p class="text-gray-400 text-base md:text-lg mb-10 max-w-xl mx-auto font-medium">
                     Let's collaborate on your next project. Whether you need a full-stack solution, AI integration, or innovative design, I'm here to bring your vision to life.
                 </p>
-                <a href="<?php echo esc_url(home_url('/contact')); ?>" class="inline-block bg-[#7C3AED] text-white px-10 py-4 rounded-xl font-black text-xs uppercase tracking-widest hover:bg-white hover:text-slate-900 transition-all duration-300 shadow-xl shadow-purple-900/20">
+                <a href="<?php echo esc_url(home_url('/contact')); ?>" class="inline-block bg-[#9E2A5C] text-white px-10 py-4 rounded-xl font-black text-xs uppercase tracking-widest hover:bg-white hover:text-slate-900 transition-all duration-300 shadow-xl shadow-pink-900/20">
                     Let's Connect
                 </a>
             </div>

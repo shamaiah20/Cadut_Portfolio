@@ -21,9 +21,9 @@ get_header(); ?>
 <section class="py-16 px-8 md:px-24 bg-white fade-up">
     <div class="container mx-auto max-w-7xl">
         <div class="mb-12">
-            <span class="text-[#7C3AED] font-black text-[10px] uppercase tracking-[0.3em] mb-4 block">Technical Stack</span>
+            <span class="text-[#9E2A5C] font-black text-[10px] uppercase tracking-[0.3em] mb-4 block">Technical Stack</span>
             <h1 class="text-6xl md:text-8xl font-extrabold text-[#111827] mb-6 tracking-tighter">
-                Technical <span class="text-[#7C3AED]">Skills</span>
+                Technical <span class="text-[#9E2A5C]">Skills</span>
             </h1>
             <p class="text-gray-500 text-lg md:text-xl max-w-2xl leading-relaxed font-medium">
                 A comprehensive overview of my technical expertise, ranging from core programming languages to modern frameworks and cloud infrastructure.

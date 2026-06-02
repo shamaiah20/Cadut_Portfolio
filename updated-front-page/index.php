@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>John Mark Isaias | Portfolio</title>
+    <title>Shamaiah Lee Cadut | Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -63,7 +63,7 @@
                     Build. Scale. Innovate.
                 </span>
                 <h1 class="text-6xl md:text-7xl font-extrabold text-[#111827] tracking-tight mb-4">
-                    John Mark Isaias
+                    Shamaiah Lee Cadut
                 </h1>
                 <h2 class="text-2xl md:text-3xl font-bold text-[#7C3AED] mb-6">
                     Aspiring Full-Stack Developer
@@ -328,7 +328,7 @@ $skills = [
             <div>
                 <h4 class="text-[#7C3AED] font-bold text-[10px] uppercase tracking-[0.2em] mb-8">Inquiries</h4>
                 <ul class="space-y-4 text-sm font-bold text-[#111827]">
-                    <li><a href="mailto:johnmarkeisaias@gmail.com" class="hover:text-[#7C3AED] transition-colors">johnmarkeisaias@gmail.com</a></li>
+                    <li><a href="mailto:shamaiahleecadut@gmail.com" class="hover:text-[#7C3AED] transition-colors">shamaiahleecadut@gmail.com</a></li>
                     <li class="text-gray-400 font-medium">+63 966 881 0579</li>
                 </ul>
             </div>

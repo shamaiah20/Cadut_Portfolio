@@ -22,9 +22,9 @@ get_header(); ?>
     }
     .input-field:focus {
         outline: none;
-        border-color: #6D28D9;
+        border-color: #9E2A5C;
         background: #FFFFFF;
-        box-shadow: 0 0 0 4px rgba(109, 40, 217, 0.1);
+        box-shadow: 0 0 0 4px rgba(158, 42, 92, 0.1);
     }
     .label-text {
         font-size: 12px;
@@ -40,9 +40,9 @@ get_header(); ?>
         display: flex;
         align-items: center;
         justify-content: center;
-        background: #F9FAFB;
-        border: 1px solid #F3F4F6;
-        color: #6D28D9;
+        background: #FDF2F8;
+        border: 1px solid #FCE7F3;
+        color: #9E2A5C;
         flex-shrink: 0;
     }
 
@@ -75,7 +75,7 @@ get_header(); ?>
         <h2 class="text-2xl font-bold text-slate-900 mb-2">Send me a message</h2>
         <p class="text-gray-400 text-sm mb-10">Fill out the form below and I'll get back to you as soon as possible.</p>
 
-        <?php echo do_shortcode('[contact-form-7 id="123" title="Contact Form"]'); ?>
+        <?php echo do_shortcode('[contact-form-7 id="56" title="Contact form 1"]'); ?>
     </div>
 
     <!-- Sidebar -->
@@ -88,7 +88,7 @@ get_header(); ?>
 
             <div class="space-y-6">
                 <a href="https://github.com/J4yemz" target="_blank" class="flex items-center gap-4 group">
-                    <div class="icon-box group-hover:bg-[#6D28D9] group-hover:text-white transition-colors">
+                    <div class="icon-box group-hover:bg-[#9E2A5C] group-hover:text-white transition-colors">
                         <i class="fa-brands fa-github text-xl"></i>
                     </div>
                     <div>
@@ -97,8 +97,8 @@ get_header(); ?>
                     </div>
                 </a>
 
-                <a href="https://www.linkedin.com/in/john-mark-isaias-a4273736a/" target="_blank" class="flex items-center gap-4 group">
-                    <div class="icon-box group-hover:bg-[#6D28D9] group-hover:text-white transition-colors">
+                <a href="https://www.linkedin.com/in/shamaiah-lee-cadut-a4273736a/" target="_blank" class="flex items-center gap-4 group">
+                    <div class="icon-box group-hover:bg-[#9E2A5C] group-hover:text-white transition-colors">
                         <i class="fa-brands fa-linkedin text-xl"></i>
                     </div>
                     <div>
@@ -107,13 +107,13 @@ get_header(); ?>
                     </div>
                 </a>
 
-                <a href="mailto:johnmarkeisaias@gmail.com" class="flex items-center gap-4 group">
-                    <div class="icon-box group-hover:bg-[#6D28D9] group-hover:text-white transition-colors">
+                <a href="mailto:shamaiahleecadut@gmail.com" class="flex items-center gap-4 group">
+                    <div class="icon-box group-hover:bg-[#9E2A5C] group-hover:text-white transition-colors">
                         <i class="fa-regular fa-envelope text-xl"></i>
                     </div>
                     <div>
                         <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest leading-none mb-1">Email</p>
-                        <p class="text-sm font-bold text-slate-700">johnmarkeisaias@gmail.com</p>
+                        <p class="text-sm font-bold text-slate-700">shamaiahleecadut@gmail.com</p>
                     </div>
                 </a>
 
@@ -140,8 +140,8 @@ get_header(); ?>
             </iframe>
             <div class="absolute inset-0 bg-white/40 pointer-events-none flex flex-col justify-end p-8 group-hover:bg-white/20 transition-all">
                 <div class="flex items-center gap-2 mb-2">
-                    <div class="w-2 h-2 bg-[#6D28D9] rounded-full animate-pulse"></div>
-                    <span class="text-[10px] font-black text-[#6D28D9] uppercase tracking-widest">Current Location</span>
+                    <div class="w-2 h-2 bg-[#9E2A5C] rounded-full animate-pulse"></div>
+                    <span class="text-[10px] font-black text-[#9E2A5C] uppercase tracking-widest">Current Location</span>
                 </div>
                 <p class="text-xl font-extrabold text-slate-900 leading-tight">Philippines</p>
             </div>

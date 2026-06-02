@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What This Is
 
-A custom WordPress theme ("John Mark") for a developer portfolio. It uses **Advanced Custom Fields (Free)** and **Custom Post Types** — no page builder, no block editor for content; everything is PHP templates + ACF field data + Tailwind CSS (CDN).
+A custom WordPress theme ("Shamaiah") for a developer portfolio. It uses **Advanced Custom Fields (Free)** and **Custom Post Types** — no page builder, no block editor for content; everything is PHP templates + ACF field data + Tailwind CSS (CDN).
 
 ## Local Development
 

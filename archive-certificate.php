@@ -16,11 +16,11 @@ get_header(); ?>
         to { opacity: 1; transform: translateY(0); }
     }
     .cert-icon-box {
-        background-color: #F5F3FF;
+        background-color: #FCE7F3;
         transition: all 0.3s ease;
     }
     .cert-card:hover .cert-icon-box {
-        background-color: #7C3AED;
+        background-color: #9E2A5C;
         color: white !important;
     }
 </style>
@@ -29,7 +29,7 @@ get_header(); ?>
 <section class="py-16 px-8 md:px-24 bg-white fade-up">
     <div class="container mx-auto max-w-7xl">
         <div class="mb-12">
-            <span class="text-[#7C3AED] font-black text-[10px] uppercase tracking-[0.3em] mb-4 block">VALIDATION & MASTERY</span>
+            <span class="text-[#9E2A5C] font-black text-[10px] uppercase tracking-[0.3em] mb-4 block">VALIDATION & MASTERY</span>
             <h1 class="text-6xl md:text-8xl font-extrabold text-[#111827] mb-6 tracking-tighter">
                 Certificates
             </h1>
@@ -82,13 +82,13 @@ get_header(); ?>
             <span class="text-gray-500 text-[10px] font-bold uppercase tracking-widest">Ready to collaborate?</span>
         </div>
         <h2 class="text-5xl md:text-7xl font-extrabold text-[#111827] mb-12 tracking-tight">
-            Let's build something <span class="text-[#7C3AED]">exceptional.</span>
+            Let's build something <span class="text-[#9E2A5C]">exceptional.</span>
         </h2>
         <div class="flex flex-wrap justify-center gap-4">
-            <a href="#" class="bg-[#4F46E5] text-white px-10 py-5 rounded-2xl font-bold text-lg shadow-xl shadow-indigo-100 hover:bg-[#4338CA] transition transform hover:-translate-y-1">
+            <a href="#" class="bg-[#9E2A5C] text-white px-10 py-5 rounded-2xl font-bold text-lg shadow-xl shadow-pink-100 hover:bg-[#801B45] transition transform hover:-translate-y-1">
                 Download Full CV
             </a>
-            <a href="/contact" class="bg-[#F3E8FF] text-[#7C3AED] px-10 py-5 rounded-2xl font-bold text-lg hover:bg-[#E9D5FF] transition transform hover:-translate-y-1">
+            <a href="/contact" class="bg-[#FCE7F3] text-[#9E2A5C] px-10 py-5 rounded-2xl font-bold text-lg hover:bg-[#FBCFE8] transition transform hover:-translate-y-1">
                 Contact Me
             </a>
         </div>

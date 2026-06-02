@@ -12,7 +12,7 @@ get_header(); ?>
         transform: translateX(-50%);
         width: 1px;
         height: 100%;
-        background: linear-gradient(to bottom, #DDD6FE, #E5E7EB, #DDD6FE);
+        background: linear-gradient(to bottom, #FCE7F3, #E5E7EB, #FCE7F3);
     }
 
     .timeline-dot {
@@ -49,9 +49,9 @@ get_header(); ?>
         transition: all 0.2s;
     }
     .skill-tag:hover {
-        border-color: #6D28D9;
-        color: #6D28D9;
-        background: #F5F3FF;
+        border-color: #9E2A5C;
+        color: #9E2A5C;
+        background: #FDF2F8;
     }
 
     /* Card hover */
@@ -79,8 +79,8 @@ get_header(); ?>
         transition: all 0.2s;
     }
     .stat-box:hover {
-        border-color: #DDD6FE;
-        background: #FDFBFF;
+        border-color: #FCE7F3;
+        background: #FFF5F8;
     }
 
     /* Section label */
@@ -89,7 +89,7 @@ get_header(); ?>
         font-weight: 700;
         letter-spacing: 0.35em;
         text-transform: uppercase;
-        color: #6D28D9;
+        color: #9E2A5C;
     }
 </style>
 
@@ -173,7 +173,7 @@ get_header(); ?>
                 <div>
                     <p class="section-label mb-4">Cloud / DevOps</p>
                     <div class="flex flex-wrap gap-2">
-                        <span class="skill-tag" style="color:#6D28D9">Render</span>
+                        <span class="skill-tag" style="color:#9E2A5C">Render</span>
                         <span class="skill-tag" style="color:#374151">Vercel</span>
                         <span class="skill-tag">GitHub</span>
                     </div>

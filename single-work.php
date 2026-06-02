@@ -63,7 +63,7 @@ $hero_image = $featured_img ? $featured_img['url'] : get_the_post_thumbnail_url(
     <div class="container mx-auto max-w-7xl">
         <div class="grid lg:grid-cols-2 gap-20 items-center">
             <div class="fade-up">
-                <a href="<?php echo home_url('/works'); ?>" class="inline-flex items-center gap-2 text-xs font-black text-[#7C3AED] uppercase tracking-widest mb-10 hover:-translate-x-2 transition-transform">
+                <a href="<?php echo home_url('/works'); ?>" class="inline-flex items-center gap-2 text-xs font-black text-[#9E2A5C] uppercase tracking-widest mb-10 hover:-translate-x-2 transition-transform">
                     <i class="fa-solid fa-arrow-left"></i> Back to Gallery
                 </a>
                 <h1 class="text-5xl md:text-7xl font-black text-slate-900 tracking-tighter mb-10 leading-[0.95]">
@@ -71,7 +71,7 @@ $hero_image = $featured_img ? $featured_img['url'] : get_the_post_thumbnail_url(
                 </h1>
                 <div class="flex flex-wrap gap-3 mb-12">
                     <?php if($tags): foreach($tags as $tag): ?>
-                        <span class="bg-purple-50 text-[#7C3AED] text-[10px] font-black px-4 py-2 rounded-full uppercase tracking-widest"><?php echo esc_html($tag); ?></span>
+                        <span class="bg-pink-50 text-[#9E2A5C] text-[10px] font-black px-4 py-2 rounded-full uppercase tracking-widest"><?php echo esc_html($tag); ?></span>
                     <?php endforeach; endif; ?>
                 </div>
                 <p class="text-gray-500 text-lg md:text-xl leading-relaxed font-medium max-w-xl">
@@ -80,7 +80,7 @@ $hero_image = $featured_img ? $featured_img['url'] : get_the_post_thumbnail_url(
             </div>
 
             <div class="fade-up" style="animation-delay: 0.2s;">
-                <div class="overflow-hidden border border-gray-100 shadow-2xl shadow-purple-900/10">
+                <div class="overflow-hidden border border-gray-100 shadow-2xl shadow-pink-900/10">
                     <img src="<?php echo esc_url($hero_image); ?>" alt="<?php the_title(); ?>" class="w-full h-auto">
                 </div>
             </div>
@@ -106,8 +106,8 @@ $hero_image = $featured_img ? $featured_img['url'] : get_the_post_thumbnail_url(
                     <div class="grid md:grid-cols-2 gap-6">
                         <?php foreach($highlights as $row): ?>
                         <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm flex gap-4">
-                            <div class="w-10 h-10 bg-purple-50 rounded-xl flex items-center justify-center flex-shrink-0">
-                                <i class="fa-solid fa-check text-[#7C3AED]"></i>
+                            <div class="w-10 h-10 bg-pink-50 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-check text-[#9E2A5C]"></i>
                             </div>
                             <p class="text-gray-600 text-sm font-medium leading-relaxed">
                                 <?php echo esc_html($row['highlight']); ?>
@@ -135,27 +135,27 @@ $hero_image = $featured_img ? $featured_img['url'] : get_the_post_thumbnail_url(
 
             <!-- Right: Project Sidebar Card -->
             <div>
-                <div class="project-detail-card shadow-xl shadow-purple-900/5">
+                <div class="project-detail-card shadow-xl shadow-pink-900/5">
                     <h4 class="text-xs font-black text-gray-400 uppercase tracking-[0.2em] mb-8">Project Details</h4>
                     
                     <div class="space-y-8 mb-12">
                         <?php if($client): ?>
                         <div>
-                            <p class="text-[10px] font-black text-[#7C3AED] uppercase tracking-widest mb-1">Client</p>
+                            <p class="text-[10px] font-black text-[#9E2A5C] uppercase tracking-widest mb-1">Client</p>
                             <p class="text-slate-800 font-bold"><?php echo esc_html($client); ?></p>
                         </div>
                         <?php endif; ?>
 
                         <?php if($date): ?>
                         <div>
-                            <p class="text-[10px] font-black text-[#7C3AED] uppercase tracking-widest mb-1">Date</p>
+                            <p class="text-[10px] font-black text-[#9E2A5C] uppercase tracking-widest mb-1">Date</p>
                             <p class="text-slate-800 font-bold"><?php echo esc_html($date); ?></p>
                         </div>
                         <?php endif; ?>
 
                         <?php if($technologies): ?>
                         <div>
-                            <p class="text-[10px] font-black text-[#7C3AED] uppercase tracking-widest mb-4">Technologies</p>
+                            <p class="text-[10px] font-black text-[#9E2A5C] uppercase tracking-widest mb-4">Technologies</p>
                             <div class="flex flex-wrap gap-2">
                                 <?php foreach($technologies as $tech): ?>
                                     <span class="tech-pill"><?php echo esc_html($tech); ?></span>
@@ -167,13 +167,13 @@ $hero_image = $featured_img ? $featured_img['url'] : get_the_post_thumbnail_url(
 
                     <div class="space-y-4">
                         <?php if($url): ?>
-                        <a href="<?php echo esc_url($url); ?>" target="_blank" class="w-full bg-[#7C3AED] text-white py-4 rounded-2xl font-black text-xs uppercase tracking-widest text-center block hover:bg-slate-900 transition-colors shadow-lg shadow-purple-200">
+                        <a href="<?php echo esc_url(url); ?>" target="_blank" class="w-full bg-[#9E2A5C] text-white py-4 rounded-2xl font-black text-xs uppercase tracking-widest text-center block hover:bg-slate-900 transition-colors shadow-lg shadow-pink-200">
                             View Live Project <i class="fa-solid fa-external-link ml-2"></i>
                         </a>
                         <?php endif; ?>
 
                         <?php if($github): ?>
-                        <a href="<?php echo esc_url($github); ?>" target="_blank" class="w-full bg-white border-2 border-gray-100 text-slate-800 py-4 rounded-2xl font-black text-xs uppercase tracking-widest text-center block hover:border-[#7C3AED] hover:text-[#7C3AED] transition-all">
+                        <a href="<?php echo esc_url($github); ?>" target="_blank" class="w-full bg-white border-2 border-gray-100 text-slate-800 py-4 rounded-2xl font-black text-xs uppercase tracking-widest text-center block hover:border-[#9E2A5C] hover:text-[#9E2A5C] transition-all">
                             Source Code <i class="fa-brands fa-github ml-2"></i>
                         </a>
                         <?php endif; ?>
@@ -193,17 +193,17 @@ $hero_image = $featured_img ? $featured_img['url'] : get_the_post_thumbnail_url(
         if($next_post):
         ?>
         <div class="text-center max-w-2xl mx-auto">
-            <span class="text-[#7C3AED] font-black text-[10px] uppercase tracking-[0.3em] mb-6 block">Next Project</span>
+            <span class="text-[#9E2A5C] font-black text-[10px] uppercase tracking-[0.3em] mb-6 block">Next Project</span>
             <h2 class="text-4xl md:text-5xl font-black text-slate-900 mb-10 tracking-tighter"><?php echo esc_html($next_post->post_title); ?></h2>
-            <a href="<?php echo get_permalink($next_post); ?>" class="inline-flex items-center gap-3 text-sm font-black text-slate-900 uppercase tracking-widest hover:text-[#7C3AED] transition-colors group">
+            <a href="<?php echo get_permalink($next_post); ?>" class="inline-flex items-center gap-3 text-sm font-black text-slate-900 uppercase tracking-widest hover:text-[#9E2A5C] transition-colors group">
                 View Project <i class="fa-solid fa-arrow-right group-hover:translate-x-2 transition-transform"></i>
             </a>
         </div>
         <?php else: ?>
         <div class="text-center max-w-2xl mx-auto">
-            <span class="text-[#7C3AED] font-black text-[10px] uppercase tracking-[0.3em] mb-6 block">Explore More</span>
+            <span class="text-[#9E2A5C] font-black text-[10px] uppercase tracking-[0.3em] mb-6 block">Explore More</span>
             <h2 class="text-4xl md:text-5xl font-black text-slate-900 mb-10 tracking-tighter">See more of my work</h2>
-            <a href="<?php echo home_url('/works'); ?>" class="inline-flex items-center gap-3 text-sm font-black text-slate-900 uppercase tracking-widest hover:text-[#7C3AED] transition-colors group">
+            <a href="<?php echo home_url('/works'); ?>" class="inline-flex items-center gap-3 text-sm font-black text-slate-900 uppercase tracking-widest hover:text-[#9E2A5C] transition-colors group">
                 Back to Gallery <i class="fa-solid fa-arrow-right group-hover:translate-x-2 transition-transform"></i>
             </a>
         </div>
