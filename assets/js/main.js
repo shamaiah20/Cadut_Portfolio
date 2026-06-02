@@ -3,7 +3,10 @@
  */
 
 // ─── SPA Work Details Modal Functions (Exposed Globally) ────────────────────
-window.openWorkModal = function(id) {
+// Track currently active expanding card to reverse the animation on close
+let activeExpandingCard = null;
+
+window.openWorkModal = function(id, cardEl, event) {
     const data = window.worksData ? window.worksData[id] : null;
     if (!data) return;
     
@@ -93,23 +96,61 @@ window.openWorkModal = function(id) {
         githubBtn.classList.add('hidden');
     }
     
-    // Show modal with animation
-    const modal = document.getElementById('work-details-modal');
-    modal.classList.remove('hidden');
-    modal.classList.add('flex');
-    setTimeout(() => {
-        modal.classList.add('opacity-100');
-    }, 10);
-    document.body.classList.add('overflow-hidden');
+    const showModalDirectly = () => {
+        const modal = document.getElementById('work-details-modal');
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        setTimeout(() => {
+            modal.classList.add('opacity-100');
+        }, 10);
+        document.body.classList.add('overflow-hidden');
+    };
+
+    if (cardEl) {
+        if (event) {
+            event.stopPropagation();
+        }
+
+        // Add class to the parent grid to dim other cards
+        const grid = cardEl.closest('.grid');
+        if (grid) {
+            grid.classList.add('portfolio-grid-focused');
+        }
+
+        // Add expand class to the clicked card
+        cardEl.classList.add('card-expanded-active');
+        activeExpandingCard = cardEl;
+
+        // Wait for card scale transition to complete before showing details modal
+        setTimeout(showModalDirectly, 400); // 400ms matches transition duration
+    } else {
+        showModalDirectly();
+    }
 };
 
 window.closeWorkModal = function() {
     const modal = document.getElementById('work-details-modal');
     modal.classList.remove('opacity-100');
+    
+    if (activeExpandingCard) {
+        const grid = activeExpandingCard.closest('.grid');
+        
+        // Wait for the modal fade-out to trigger card scale-down
+        setTimeout(() => {
+            if (activeExpandingCard) {
+                activeExpandingCard.classList.remove('card-expanded-active');
+            }
+            if (grid) {
+                grid.classList.remove('portfolio-grid-focused');
+            }
+            activeExpandingCard = null;
+        }, 100);
+    }
+
     setTimeout(() => {
         modal.classList.add('hidden');
         modal.classList.remove('flex');
-    }, 150);
+    }, 300);
     document.body.classList.remove('overflow-hidden');
 };
 

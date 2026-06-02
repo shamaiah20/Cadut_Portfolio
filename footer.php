@@ -63,7 +63,7 @@
                 <h4 class="text-accent font-bold text-[10px] uppercase tracking-[0.2em] mb-8">Connect</h4>
                 <ul class="space-y-4 text-sm font-medium text-zinc-400">
                     <li>
-                        <a href="https://github.com/J4yemz" target="_blank" class="group flex items-center text-zinc-400 hover:text-accent transition duration-300">
+                        <a href="https://github.com/" target="_blank" class="group flex items-center text-zinc-400 hover:text-accent transition duration-300">
                             <i class="fa-brands fa-github mr-2.5 text-zinc-500 group-hover:text-accent transition duration-300 w-4 text-center"></i>
                             GitHub
                         </a>
@@ -75,7 +75,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="https://www.instagram.com/jayem.jsx/" target="_blank" class="group flex items-center text-zinc-400 hover:text-accent transition duration-300">
+                        <a href="https://www.instagram.com/shamlee_18/" target="_blank" class="group flex items-center text-zinc-400 hover:text-accent transition duration-300">
                             <i class="fa-brands fa-instagram mr-2.5 text-zinc-500 group-hover:text-accent transition duration-300 w-4 text-center"></i>
                             Instagram
                         </a>

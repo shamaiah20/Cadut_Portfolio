@@ -1591,3 +1591,40 @@ a:hover {
     align-items: center;
   }
 }
+
+/* ─── Portfolio Card Focus/Expand Interaction ──────────────────── */
+
+/* Keep layout stable: transition-transform ensures standard flex/grid spacing is unchanged */
+.portfolio-card-container {
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.25, 1), 
+              box-shadow 0.4s cubic-bezier(0.25, 1, 0.25, 1), 
+              opacity 0.4s ease, 
+              border-color 0.4s ease;
+  position: relative;
+  z-index: 10;
+  will-change: transform, box-shadow;
+}
+
+/* Hover state scale (micro-interaction before click) */
+.portfolio-card-container:hover {
+  transform: translateY(-4px) scale(1.015);
+}
+
+/* Parent container active state (when a card is expanded) */
+.portfolio-grid-focused .portfolio-card-container {
+  opacity: 0.35;
+  filter: grayscale(0.2) blur(0.5px);
+  pointer-events: none; /* prevent multiple clicks during animation */
+}
+
+/* Selected/clicked card state */
+.portfolio-grid-focused .portfolio-card-container.card-expanded-active {
+  opacity: 1;
+  filter: none;
+  transform: scale(1.06); /* Enlarge */
+  z-index: 30; /* Bring to front */
+  border-color: #F472B6 !important; /* Glow border */
+  box-shadow: 0 20px 50px -10px rgba(244, 114, 182, 0.35); /* Glowing shadow using accent color */
+  pointer-events: auto;
+}
+

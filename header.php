@@ -68,7 +68,7 @@
         <nav class="flex items-center justify-between px-8 md:px-24 py-5 max-w-7xl mx-auto w-full">
             <div class="flex items-center">
                 <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="block">
-                    <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/logo.png' ); ?>" alt="Logo" class="h-8 w-auto object-contain">
+                   <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/logo_white.png' ); ?>" alt="Logo" class="h-14 md:h-16 w-auto object-contain">
                 </a>
             </div>
             
@@ -85,9 +85,11 @@
                 <?php 
                 $resume_link = get_field('hero_resume_link', get_option('page_on_front')) ?: '#';
                 ?>
-                <a href="<?php echo esc_url($resume_link); ?>" target="_blank" class="border border-accent text-accent px-5 py-2 rounded-full text-xs font-bold tracking-wider hover:bg-accent hover:text-bg-dark transition duration-300">
-                    Resume PDF
-                </a>
+                <a href="<?php echo get_template_directory_uri(); ?>/Resume_Cadut,%20Shamaiah%20Lee.pdf"
+target="_blank"
+class="border border-accent text-accent px-5 py-2 rounded-full text-xs font-bold tracking-wider hover:bg-accent hover:text-bg-dark transition duration-300">
+    Resume PDF
+</a>
             </div>
 
             <!-- Mobile Nav Toggle -->

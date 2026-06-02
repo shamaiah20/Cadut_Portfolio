@@ -549,7 +549,7 @@ $carousel_loop = array_merge($carousel_items, $carousel_items);
                         ];
                         ?>
                         
-                        <div class="bg-card-dark border border-border-dark rounded-3xl overflow-hidden hover:border-accent/40 transition duration-300 flex flex-col group cursor-pointer" onclick="openWorkModal(<?php the_ID(); ?>)">
+                        <div class="portfolio-card-container bg-card-dark border border-border-dark rounded-3xl overflow-hidden hover:border-accent/40 flex flex-col group cursor-pointer" onclick="openWorkModal(<?php the_ID(); ?>, this, event)">
                             <!-- Image -->
                             <div class="relative overflow-hidden aspect-[16/10] bg-zinc-950">
                                 <img src="<?php echo esc_url($image_url); ?>" alt="<?php the_title_attribute(); ?>" class="w-full h-full object-cover group-hover:scale-[1.02] transition duration-700">
